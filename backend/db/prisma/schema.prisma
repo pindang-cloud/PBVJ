@@ -8,8 +8,8 @@ datasource db {
 }
 
 enum Role {
-  admin
-  user
+  ADMIN
+  USER
 }
 
 enum Posisi {
@@ -32,7 +32,7 @@ model User {
   email      String    @unique
   password   String
   phone      String?
-  role       Role      @default(user)
+  role       Role      @default(USER)
   created_at DateTime  @default(now())
   update_at  DateTime  @updatedAt
   deleted_at DateTime?
