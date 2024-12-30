@@ -32,10 +32,14 @@ model Berita {
 }
 
 model Tim {
-  id            Int @id @default(autoincrement())
-  nama          String
-  logo          String
-  createdAt     DateTime @default(now())
+  id_tim      Int       @id @default(autoincrement())
+  nama        String    @unique
+  logo        String
+  deskripsi   String
+  createdAt   DateTime  @default(now())
+  pemain      Pemain[]
+  pelatih     Pelatih[]
 }
+
 
 
