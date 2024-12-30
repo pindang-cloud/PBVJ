@@ -12,34 +12,88 @@ enum Role {
   user
 }
 
+enum Posisi {
+  SETTER
+  OUTSIDE_HITTER
+  OPPOSITE
+  LIBERO
+  MIDDLE_BLOCKER
+}
+
+enum PosisiWasit {
+  WASIT_UTAMA
+  WASIT_GARIS
+  WASIT_PENCATAT_SKOR
+}
+
 model User {
-  id_user   Int @id @default(autoincrement())
-  username  String
-  email     String @unique
-  password  String
-  phone     String
-  role      Role @default(user)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id_user    Int       @id @default(autoincrement())
+  username   String?
+  email      String    @unique
+  password   String
+  phone      String?
+  role       Role      @default(user)
+  created_at DateTime  @default(now())
+  update_at  DateTime  @updatedAt
+  deleted_at DateTime?
 }
 
 model Berita {
-  id_berita     Int @id @default(autoincrement())
-  judul         String
-  deskripsi     String
-  gambar        String
-  createdAt     DateTime @default(now())
+  id_berita  Int       @id @default(autoincrement())
+  judul      String
+  deskripsi  String
+  gambar     String
+  created_at DateTime  @default(now())
+  update_at  DateTime  @updatedAt
+  deleted_at DateTime?
 }
 
 model Tim {
-  id_tim      Int       @id @default(autoincrement())
-  nama        String    @unique
-  logo        String
-  deskripsi   String
-  createdAt   DateTime  @default(now())
-  pemain      Pemain[]
-  pelatih     Pelatih[]
+  id_tim     Int       @id @default(autoincrement())
+  nama       String    @unique
+  logo       String
+  deskripsi  String
+  created_at DateTime  @default(now())
+  update_at  DateTime  @updatedAt
+  deleted_at DateTime?
+  pemain     Pemain[]
+  pelatih    Pelatih[]
 }
 
+model Pemain {
+  id_pemain     Int       @id @default(autoincrement())
+  name          String
+  nomerPunggung Int
+  posisi        Posisi
+  created_at    DateTime  @default(now())
+  updated_at    DateTime  @updatedAt
+  deleted_at    DateTime?
+  Tim           Tim?      @relation(fields: [timId_tim], references: [id_tim])
+  timId_tim     Int?
+}
 
+model Pelatih {
+  id_pelatih   Int       @id @default(autoincrement())
+  name         String
+  usia         Int
+  pengalaman   String
+  tanggalMulai DateTime // Tanggal mulai melatih
+  created_at   DateTime  @default(now())
+  updated_at   DateTime  @updatedAt
+  deleted_at   DateTime?
+  Tim          Tim?      @relation(fields: [timId_tim], references: [id_tim])
+  timId_tim    Int?
+}
 
+model Wasit {
+  id_wasit     Int         @id @default(autoincrement())
+  name         String
+  usia         Int
+  pengalaman   String
+  sertifikasi  String?
+  tanggalMulai DateTime
+  posisi       PosisiWasit
+  created_at   DateTime    @default(now())
+  updated_at   DateTime    @updatedAt
+  deleted_at   DateTime?
+}
