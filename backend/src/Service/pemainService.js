@@ -1,6 +1,6 @@
 const prisma = require("../../db");
 
-const createPemainFunc = async (name, nomerPunggung, posisi, timID) => {
+const createPemain = async (name, nomerPunggung, posisi, timID) => {
   try {
     const pemain = await prisma.pemain.create({
       data: {
@@ -17,7 +17,7 @@ const createPemainFunc = async (name, nomerPunggung, posisi, timID) => {
   }
 };
 
-const getAllPemainFunc = async () => {
+const getAllPemain = async () => {
   try {
     const data = await prisma.pemain.findMany({
       where: { deleted_at: null },
@@ -29,7 +29,7 @@ const getAllPemainFunc = async () => {
   }
 };
 
-const getPemainByIDFunc = async (id) => {
+const getPemainByID = async (id) => {
   try {
     const data = await prisma.pemain.findUnique({
       where: { id_pemain: id, deleted_at: null },
@@ -42,7 +42,7 @@ const getPemainByIDFunc = async (id) => {
   }
 };
 
-const getPemainByTimFunc = async (timId) => {
+const getPemainByTim = async (timId) => {
   try {
     const data = await prisma.pemain.findMany({
       where: {
@@ -59,7 +59,7 @@ const getPemainByTimFunc = async (timId) => {
   }
 };
 
-const updatePemainFunc = async (id, name, nomerPunggung, posisi, timID) => {
+const updatePemain = async (id, name, nomerPunggung, posisi, timID) => {
   try {
     const data = await prisma.pemain.update({
       where: { id_pemain: id, deleted_at: null },
@@ -76,9 +76,9 @@ const updatePemainFunc = async (id, name, nomerPunggung, posisi, timID) => {
   }
 };
 
-const deletePemainFunc = async (id) => {
+const deletePemain = async (id) => {
   try {
-    await prisma.pemain.update({
+    return await prisma.pemain.delete({
       where: { id_pemain: id, deleted_at: null },
       data: { deleted_at: new Date() },
     });
@@ -88,10 +88,10 @@ const deletePemainFunc = async (id) => {
 };
 
 module.exports = {
-  createPemainFunc,
-  getAllPemainFunc,
-  getPemainByIDFunc,
-  getPemainByTimFunc,
-  updatePemainFunc,
-  deletePemainFunc,
+  createPemain,
+  getAllPemain,
+  getPemainByID,
+  getPemainByTim,
+  updatePemain,
+  deletePemain,
 };

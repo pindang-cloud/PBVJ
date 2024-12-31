@@ -1,14 +1,14 @@
 const response = require("../../resTemp");
 const {
-  createPemainFunc,
-  getAllPemainFunc,
-  getPemainByIDFunc,
-  updatePemainFunc,
-  deletePemainFunc,
-  getPemainByTimFunc,
+  createPemain,
+  getAllPemain,
+  getPemainByID,
+  updatePemain,
+  deletePemain,
+  getPemainByTim,
 } = require("../Service/pemainService");
 
-const createPemain = async (req, res) => {
+const createPemainController = async (req, res) => {
   try {
     const { name, nomerPunggung, posisi, timID } = req.body;
 
@@ -20,12 +20,7 @@ const createPemain = async (req, res) => {
         "Missing Required Fields: name, nomerPunggung, posisi, timID - Check Again"
       );
 
-    const newPemain = await createPemainFunc(
-      name,
-      nomerPunggung,
-      posisi,
-      timID
-    );
+    const newPemain = await createPemain(name, nomerPunggung, posisi, timID);
 
     response(res, 201, newPemain, "Data Has Been Created");
   } catch (error) {
@@ -39,9 +34,9 @@ const createPemain = async (req, res) => {
   }
 };
 
-const getAllPemain = async (req, res) => {
+const getAllPemainController = async (req, res) => {
   try {
-    const pemainList = await getAllPemainFunc();
+    const pemainList = await getAllPemain();
 
     response(res, 200, pemainList, "Get Data Is Succesfuly");
   } catch (error) {
@@ -49,11 +44,11 @@ const getAllPemain = async (req, res) => {
   }
 };
 
-const getPemainById = async (req, res) => {
+const getPemainByIdController = async (req, res) => {
   try {
     const { id } = req.params;
 
-    const pemain = await getPemainByIDFunc(id);
+    const pemain = await getPemainByID(id);
 
     if (!pemain) {
       return response(res, 404, {}, "Pemain Not Found - Check Again");
@@ -65,10 +60,10 @@ const getPemainById = async (req, res) => {
   }
 };
 
-const getPemainByTim = async (req, res) => {
+const getPemainByTimController = async (req, res) => {
   try {
     const { timId } = req.params;
-    const pemain = await getPemainByTimFunc(timId);
+    const pemain = await getPemainByTim(timId);
 
     if (pemain.length === 0) {
       return response(res, 404, {}, "No Players Found For This Team");
@@ -80,12 +75,12 @@ const getPemainByTim = async (req, res) => {
   }
 };
 
-const updatePemain = async (req, res) => {
+const updatePemainController = async (req, res) => {
   try {
     const { id } = req.params;
     const { name, nomerPunggung, posisi, timID } = req.body;
 
-    const updatedPemain = await updatePemainFunc(
+    const updatedPemain = await updatePemain(
       id,
       name,
       nomerPunggung,
@@ -99,23 +94,23 @@ const updatePemain = async (req, res) => {
   }
 };
 
-const deletePemain = async (req, res) => {
+const deletePemainController = async (req, res) => {
   try {
     const { id } = req.params;
 
-    await deletePemainFunc(id);
+    await deletePemain(id);
 
-    response(res, 204, {}, "Delete Pemain Is Succesfully");
+    response(res, 200, {}, "Delete Pemain Is Succesfully");
   } catch (error) {
     response(res, 500, {}, "Error Deleting Pemain", error.message);
   }
 };
 
 module.exports = {
-  createPemain,
-  getAllPemain,
-  getPemainById,
-  getPemainByTim,
-  updatePemain,
-  deletePemain,
+  createPemainController,
+  getAllPemainController,
+  getPemainByIdController,
+  getPemainByTimController,
+  updatePemainController,
+  deletePemainController,
 };
