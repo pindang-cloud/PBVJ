@@ -27,7 +27,7 @@ enum PosisiWasit {
 }
 
 model User {
-  id_user    Int       @id @default(autoincrement())
+  id_user    String    @id @default(uuid())
   username   String?
   email      String    @unique
   password   String
@@ -39,7 +39,7 @@ model User {
 }
 
 model Berita {
-  id_berita  Int       @id @default(autoincrement())
+  id_berita  String    @id @default(uuid())
   judul      String
   deskripsi  String
   gambar     String
@@ -49,7 +49,7 @@ model Berita {
 }
 
 model Tim {
-  id_tim     Int       @id @default(autoincrement())
+  id_tim     String    @id @default(uuid())
   nama       String    @unique
   logo       String
   deskripsi  String
@@ -61,7 +61,7 @@ model Tim {
 }
 
 model Pemain {
-  id_pemain     Int       @id @default(autoincrement())
+  id_pemain     String    @id @default(uuid())
   name          String
   nomerPunggung Int
   posisi        Posisi
@@ -69,11 +69,11 @@ model Pemain {
   updated_at    DateTime  @updatedAt
   deleted_at    DateTime?
   Tim           Tim?      @relation(fields: [timId_tim], references: [id_tim])
-  timId_tim     Int?
+  timId_tim     String?
 }
 
 model Pelatih {
-  id_pelatih   Int       @id @default(autoincrement())
+  id_pelatih   String    @id @default(uuid())
   name         String
   usia         Int
   pengalaman   String
@@ -82,11 +82,11 @@ model Pelatih {
   updated_at   DateTime  @updatedAt
   deleted_at   DateTime?
   Tim          Tim?      @relation(fields: [timId_tim], references: [id_tim])
-  timId_tim    Int?
+  timId_tim    String?
 }
 
 model Wasit {
-  id_wasit     Int         @id @default(autoincrement())
+  id_wasit     String      @id @default(uuid())
   name         String
   usia         Int
   pengalaman   String
