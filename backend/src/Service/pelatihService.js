@@ -70,6 +70,7 @@ const deletePelatih = async (id) => {
   return await prisma.pelatih.delete({
     where: {
       id_pelatih: id,
+      deleted_at: null,
     },
     data: {
       deleted_at: new Date(),
