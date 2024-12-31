@@ -1,3 +1,4 @@
+const bcrypt = require('bcryptjs');
 const {
     getAllUsers,
     getUserById,
@@ -29,10 +30,34 @@ const {
     }
   };
   
-  // Membuat user baru
+  // // Membuat user baru
+  // exports.createUser = async (req, res) => {
+  //   try {
+  //     const newUser = await createUser(req.body);
+  //     res.status(201).json(newUser);
+  //   } catch (error) {
+  //     res.status(500).json({ error: error.message });
+  //   }
+  // };
+
   exports.createUser = async (req, res) => {
     try {
-      const newUser = await createUser(req.body);
+      const { username, email, password, phone, role } = req.body;
+  
+      const hashedPassword = await bcrypt.hash(password, 10);
+  
+      const newUser = await prisma.user.create({
+        data: {
+          username: username,
+          email: email,
+          password: hashedPassword,
+          phone: phone,
+          role: role,
+          created_at: new Date(),
+          update_at: new Date(),
+        },
+      });
+
       res.status(201).json(newUser);
     } catch (error) {
       res.status(500).json({ error: error.message });
@@ -42,7 +67,18 @@ const {
   // Memperbarui user
   exports.updateUser = async (req, res) => {
     try {
-      const updatedUser = await updateUser(parseInt(req.params.id), req.body);
+      const userId = parseInt(req.params.id);
+      const { username, email, password, phone, role } = req.body;
+      let updatedData = { username, email, phone, role, updated_at: new Date() };
+      if (password) {
+        const hashedPassword = await bcrypt.hash(password, 10);
+        updatedData.password = hashedPassword;
+      }
+      const updatedUser = await prisma.user.update({
+        where: { id: userId },
+        data: updatedData,
+      });
+  
       res.status(200).json(updatedUser);
     } catch (error) {
       res.status(500).json({ error: error.message });
@@ -52,7 +88,11 @@ const {
   // Menghapus user
   exports.deleteUser = async (req, res) => {
     try {
-      const deletedUser = await deleteUser(parseInt(req.params.id));
+      const userId = parseInt(req.params.id);
+      const deletedUser = await prisma.user.delete({
+        where: { id: userId },
+      });
+  
       res.status(200).json(deletedUser);
     } catch (error) {
       res.status(500).json({ error: error.message });
