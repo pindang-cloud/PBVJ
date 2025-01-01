@@ -15,13 +15,13 @@ const createPelatihController = async (req, res) => {
 
     const afterCheckDate = validateAndFormatDate(tanggalMulai);
 
-    const newPelatih = await createPelatih(
+    const newPelatih = await createPelatih({
       name,
       usia,
       pengalaman,
-      afterCheckDate,
-      timID
-    );
+      tanggalMulai: afterCheckDate,
+      timId_tim: timID,
+    });
 
     response(res, 201, newPelatih, "Pelatih Created Successfully");
   } catch (error) {
@@ -75,14 +75,13 @@ const updatePelatihController = async (req, res) => {
 
     const afterCheckDate = validateAndFormatDate(tanggalMulai);
 
-    const updatedPelatih = await updatePelatih(
-      id,
+    const updatedPelatih = await updatePelatih(id, {
       name,
       usia,
       pengalaman,
-      afterCheckDate,
-      timID
-    );
+      tanggalMulai: afterCheckDate,
+      timId_tim: timID,
+    });
 
     response(res, 200, updatedPelatih, "Pelatih updated successfully");
   } catch (error) {

@@ -1,69 +1,70 @@
 const prisma = require("../../db");
 
-const createPelatih = async (name, usia, pengalaman, tanggalMulai, timID) => {
-  return await prisma.pelatih.create({
-    data: {
-      name: name,
-      usia: usia,
-      pengalaman: pengalaman,
-      tanggalMulai: tanggalMulai,
-      timId_tim: timID,
-    },
-  });
+const createPelatih = async (data) => {
+  try {
+    return await prisma.pelatih.create({
+      data,
+    });
+  } catch (error) {
+    throw new Error(`Error Creating Data : ${error.message}`);
+  }
 };
 
 const getAllPelatih = async () => {
-  return await prisma.pelatih.findMany({
-    where: {
-      deleted_at: null,
-    },
-    include: {
-      Tim: true,
-    },
-  });
+  try {
+    return await prisma.pelatih.findMany({
+      where: {
+        deleted_at: null,
+      },
+      include: {
+        Tim: true,
+      },
+    });
+  } catch (error) {
+    throw new Error(`Error Getting Data : ${error.message}`);
+  }
 };
 
 const getPelatihById = async (id) => {
-  return await prisma.pelatih.findUnique({
-    where: {
-      id_pelatih: id,
-      deleted_at: null,
-    },
-    include: {
-      Tim: true,
-    },
-  });
+  try {
+    return await prisma.pelatih.findUnique({
+      where: {
+        id_pelatih: id,
+        deleted_at: null,
+      },
+      include: {
+        Tim: true,
+      },
+    });
+  } catch (error) {
+    throw new Error(`Error Getting Data : ${error.message}`);
+  }
 };
 
 const getPelatihByTim = async (timID) => {
-  return await prisma.pelatih.findMany({
-    where: {
-      timId_tim: timID,
-      deleted_at: null,
-    },
-  });
+  try {
+    return await prisma.pelatih.findMany({
+      where: {
+        timId_tim: timID,
+        deleted_at: null,
+      },
+    });
+  } catch (error) {
+    throw new Error(`Error Getting Data : ${error.message}`);
+  }
 };
 
-const updatePelatih = async (
-  id,
-  name,
-  usia,
-  pengalaman,
-  tanggalMulai,
-  timID
-) => {
-  return await prisma.pelatih.update({
-    where: {
-      id_pelatih: id,
-    },
-    data: {
-      name: name,
-      usia: usia,
-      pengalaman: pengalaman,
-      tanggalMulai: tanggalMulai,
-      timId_tim: timID,
-    },
-  });
+const updatePelatih = async (id, data) => {
+  try {
+    return await prisma.pelatih.update({
+      where: {
+        id_pelatih: id,
+      },
+      data,
+    });
+  } catch (error) {
+    throw new Error(`Error Updating Data : ${error.message}`);
+  }
 };
 
 const deletePelatih = async (id) => {
