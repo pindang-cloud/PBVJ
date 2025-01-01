@@ -1,17 +1,10 @@
 const prisma = require("../../db");
 
-const createPemain = async (name, nomerPunggung, posisi, timID) => {
+const createPemain = async (data) => {
   try {
-    const pemain = await prisma.pemain.create({
-      data: {
-        name,
-        nomerPunggung,
-        posisi,
-        timId_tim: timID,
-      },
+    return await prisma.pemain.create({
+      data,
     });
-
-    return pemain;
   } catch (error) {
     throw new Error(`Error creating pemain: ${error.message}`);
   }
@@ -19,11 +12,10 @@ const createPemain = async (name, nomerPunggung, posisi, timID) => {
 
 const getAllPemain = async () => {
   try {
-    const data = await prisma.pemain.findMany({
+    return await prisma.pemain.findMany({
       where: { deleted_at: null },
       include: { Tim: true },
     });
-    return data;
   } catch (error) {
     throw new Error(`Error Getting Data: ${error.message}`);
   }
@@ -31,12 +23,10 @@ const getAllPemain = async () => {
 
 const getPemainByID = async (id) => {
   try {
-    const data = await prisma.pemain.findUnique({
+    return await prisma.pemain.findUnique({
       where: { id_pemain: id, deleted_at: null },
       include: { Tim: true },
     });
-
-    return data;
   } catch (error) {
     throw new Error(`Error Getting Data: ${error.message}`);
   }
@@ -44,7 +34,7 @@ const getPemainByID = async (id) => {
 
 const getPemainByTim = async (timId) => {
   try {
-    const data = await prisma.pemain.findMany({
+    return await prisma.pemain.findMany({
       where: {
         timId_tim: timId,
         deleted_at: null,
@@ -53,24 +43,17 @@ const getPemainByTim = async (timId) => {
         Tim: true,
       },
     });
-    return data;
   } catch (error) {
     throw new Error(`Error Getting Data: ${error.message}`);
   }
 };
 
-const updatePemain = async (id, name, nomerPunggung, posisi, timID) => {
+const updatePemain = async (id, data) => {
   try {
-    const data = await prisma.pemain.update({
+    return await prisma.pemain.update({
       where: { id_pemain: id, deleted_at: null },
-      data: {
-        name,
-        nomerPunggung,
-        posisi,
-        timId_tim: timID,
-      },
+      data,
     });
-    return data;
   } catch (error) {
     throw new Error(`Error Getting Data: ${error.message}`);
   }

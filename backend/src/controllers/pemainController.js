@@ -7,6 +7,9 @@ const {
   deletePemain,
   getPemainByTim,
 } = require("../Service/pemainService");
+const {
+  validPositionPemain,
+} = require("../Service/utils/positionValidationPemain");
 
 const createPemainController = async (req, res) => {
   try {
@@ -17,20 +20,22 @@ const createPemainController = async (req, res) => {
         res,
         400,
         {},
-        "Missing Required Fields: name, nomerPunggung, posisi, timID - Check Again"
+        "Missing Required Fields: name, nomerPunggung, posisi, timID"
       );
 
-    const newPemain = await createPemain(name, nomerPunggung, posisi, timID);
+    const checkPosition = validPositionPemain(posisi);
+    if (!checkPosition) return response(res, 400, {}, "Invalid Posisi Value");
+
+    const newPemain = await createPemain({
+      name,
+      nomerPunggung,
+      posisi,
+      timId_tim: timID,
+    });
 
     response(res, 201, newPemain, "Data Has Been Created");
   } catch (error) {
-    response(
-      res,
-      500,
-      {},
-      "Error Creating Pemain - Check Again",
-      error.message
-    );
+    response(res, 500, {}, "Error Creating Pemain", error.message);
   }
 };
 
@@ -80,13 +85,15 @@ const updatePemainController = async (req, res) => {
     const { id } = req.params;
     const { name, nomerPunggung, posisi, timID } = req.body;
 
-    const updatedPemain = await updatePemain(
-      id,
+    const checkPosition = validPositionPemain(posisi);
+    if (!checkPosition) return response(res, 400, {}, "Invalid Posisi Value");
+
+    const updatedPemain = await updatePemain(id, {
       name,
       nomerPunggung,
       posisi,
-      timID
-    );
+      timId_tim: timID,
+    });
 
     response(res, 200, updatedPemain, "Update Data Is Succesfuly");
   } catch (error) {
