@@ -1,6 +1,18 @@
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
+
+exports.getUserByEmailOrUsername = async (identifier) => {
+  return await prisma.user.findFirst({
+    where: {
+      OR: [
+        { email: identifier },
+        { username: identifier },
+      ],
+    },
+  });
+};
+
 // Mendapatkan semua user
 exports.getAllUsers = async () => {
   return await prisma.user.findMany({
@@ -10,7 +22,7 @@ exports.getAllUsers = async () => {
 
 // Mendapatkan user berdasarkan ID
 exports.getUserById = async (id) => {
-  return await prisma.user.findUnique({
+  return await prisma.user.findFirst({
     where: { id_user: id },
   });
 };
