@@ -2,7 +2,10 @@
   <div
     class="flex flex-col items-center justify-center min-h-screen bg-gray-100 text-gray-800"
   >
-    <h1 class="text-4xl font-bold">Welcome to Home Page</h1>
+    <h1 class="font-custom text-black text-4xl font-light">
+      Welcome to Home Page
+    </h1>
+    <p class="mt-4 text-red-700 font-lulo">Counter: {{ counter.count }}</p>
     <p class="mt-4 text-lg">Counter: {{ counter.count }}</p>
     <button
       @click="increment"
