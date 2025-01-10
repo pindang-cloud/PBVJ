@@ -51,17 +51,17 @@
           >Data Base</a
         >
         <a
-          href="#"
+          href="/contact"
           class="lg:text-xs xl:text-sm text-white hover:text-yellow-400"
           >Contact</a
         >
         <a
-          href="#"
+          href="/events"
           class="lg:text-xs xl:text-sm text-white hover:text-yellow-400"
           >Events</a
         >
         <a
-          href="#"
+          href="/blog"
           class="lg:text-xs xl:text-sm text-white hover:text-yellow-400"
           >Blog</a
         >
