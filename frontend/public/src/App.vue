@@ -1,0 +1,32 @@
+<template>
+  <div class="">
+    <navbar></navbar>
+    <router-view />
+  </div>
+</template>
+
+<script>
+import navbar from "./views/navbar.vue";
+
+export default {
+  components: {
+    navbar,
+  },
+};
+</script>
+
+<style>
+nav {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f0f0f0;
+}
+.link {
+  text-decoration: none;
+  color: #42b983;
+}
+.link:hover {
+  color: #2c3e50;
+}
+</style>
