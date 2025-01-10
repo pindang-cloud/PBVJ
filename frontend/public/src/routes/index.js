@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 // Import komponen halaman
-import Home from "../views/home.vue";
+import Home from "../views/Home.vue";
 import About from "../views/about.vue";
 import Contact from "../views/contact.vue";
 import Events from "../views/events.vue";
