@@ -1,8 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 // Import komponen halaman
-import Home from "../views/Home.vue";
-import About from "../views/About.vue";
+import Home from "../views/home.vue";
+import About from "../views/about.vue";
 
 const routes = [
   { path: "/", name: "Home", component: Home },
