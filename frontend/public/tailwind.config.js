@@ -6,6 +6,11 @@ export default {
       fontFamily: {
         custom: ["LuloFont", "sans-serif"], // Jangan lupa menyertakan fallback font
       },
+      colors: {
+        brown: {
+          500: '#A0522D',
+        },
+      },
     },
     screens: {
       sm: "320px", // Default sm breakpoint
