@@ -31,22 +31,22 @@
 
       <div class="flex space-x-6 uppercase font-bold tracking-widest">
         <a
-          href="#"
+          href="/"
           class="lg:text-xs xl:text-sm text-white hover:text-yellow-400"
           >Home</a
         >
         <a
-          href="#"
+          href="/about"
           class="lg:text-xs xl:text-sm text-white hover:text-yellow-400"
           >About</a
         >
         <a
-          href="#"
+          href="/club"
           class="lg:text-xs xl:text-sm text-white hover:text-yellow-400"
           >Club</a
         >
         <a
-          href="#"
+          href="/database"
           class="lg:text-xs xl:text-sm text-white hover:text-yellow-400"
           >Data Base</a
         >

@@ -3,6 +3,7 @@
       <div class="w-full max-w-2xl">
         <div class="mb-8">
           <h1 class="font-custom text-white text-2xl font-bold tracking-wide uppercase mb-2">Contact</h1>
+          <div class="w-[30%] md:w-[30%] h-1 bg-gray-200 mt-2" data-v-40f7d07e=""></div>
           <hr class="w-100 h-1" />
         </div>
   

@@ -337,6 +337,165 @@
           </div>
         </div>
       </div>
+
+      <!-- Our Clients -->
+      <div class="py-10 mx-10 md:mx-12 lg:mx-32 xl:mx-56">
+        <div class="mx-auto max-w-xl mt-4">
+          <h1 class="text-white uppercase text-xl lg:text-3xl font-bold tracking-wider">
+            Our Clients
+          </h1>
+          <div class="w-[40%] md:w-[50%] h-1 bg-gray-200 mt-2" data-v-40f7d07e=""></div>
+          <hr />
+        </div>
+        <div class="flex flex-wrap justify-center gap-6 p-6 bg-transparent">
+          <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-md w-24 h-24">
+            <img src="https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg" alt="Atlanta Hawks" class="w-full h-full object-contain">
+          </div>
+
+          <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-md w-24 h-24">
+            <img src="https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg" alt="Golden State Warriors" class="w-full h-full object-contain">
+          </div>
+
+          <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-md w-24 h-24">
+            <img src="https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg" alt="Los Angeles Lakers" class="w-full h-full object-contain">
+          </div>
+
+          <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-md w-24 h-24">
+            <img src="https://cdn.nba.com/logos/nba/1610612758/primary/L/logo.svg" alt="Sacramento Kings" class="w-full h-full object-contain">
+          </div>
+
+          <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-md w-24 h-24">
+            <img src="https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg" alt="Toronto Raptors" class="w-full h-full object-contain">
+          </div>
+        </div>
+      </div>
+
+      <!-- Service -->
+      <div class="bg-red-800 pb-10">
+        <div class="mx-auto max-w-xl pt-10">
+          <h1 class="text-white uppercase text-xl lg:text-3xl font-bold tracking-wider">
+            Our Services
+          </h1>
+          <div class="w-[40%] md:w-[50%] h-1 bg-gray-200 mt-2" data-v-40f7d07e=""></div>
+          <hr />
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 md:mx-12 lg:mx-32 xl:mx-56">
+          <div class="text-center">
+            <img
+              src="../assets/images/megawati-hangestri-2072703356.webp"
+              alt="Service 1"
+              class="w-full h-auto object-contain"
+            />
+            <h2 class="text-lg font-bold mt-4 text-white uppercase">Service 1</h2>
+            <hr class="my-3 border-white-600" />
+            <button class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition">
+              Book Now
+            </button>
+          </div>
+
+          <div class="text-center">
+            <img
+              src="../assets/images/megawati-hangestri-2072703356.webp"
+              alt="Service 2"
+              class="w-full h-auto object-contain"
+            />
+            <h2 class="text-lg font-bold mt-4 text-white uppercase">Service 2</h2>
+            <hr class="my-3 border-white-600" />
+            <button class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition">
+              Book Now
+            </button>
+          </div>
+
+          <div class="text-center">
+            <img
+              src="../assets/images/megawati-hangestri-2072703356.webp"
+              alt="Service 3"
+              class="w-full h-auto object-contain"
+            />
+            <h2 class="text-lg font-bold mt-4 text-white uppercase">Service 3</h2>
+            <hr class="my-3 border-white-600" />
+            <button class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition">
+              Book Now
+            </button>
+          </div>
+          <div class="text-center">
+            <img
+              src="../assets/images/megawati-hangestri-2072703356.webp"
+              alt="Service 3"
+              class="w-full h-auto object-contain"
+            />
+            <h2 class="text-lg font-bold mt-4 text-white uppercase">Service 3</h2>
+            <hr class="my-3 border-white-600" />
+            <button class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition">
+              Book Now
+            </button>
+          </div>
+          <div class="text-center">
+            <img
+              src="../assets/images/megawati-hangestri-2072703356.webp"
+              alt="Service 3"
+              class="w-full h-auto object-contain"
+            />
+            <h2 class="text-lg font-bold mt-4 text-white uppercase">Service 3</h2>
+            <hr class="my-3 border-white-600" />
+            <button class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition">
+              Book Now
+            </button>
+          </div>
+          <div class="text-center">
+            <img
+              src="../assets/images/megawati-hangestri-2072703356.webp"
+              alt="Service 3"
+              class="w-full h-auto object-contain"
+            />
+            <h2 class="text-lg font-bold mt-4 text-white uppercase">Service 3</h2>
+            <hr class="my-3 border-white-600" />
+            <button class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition">
+              Book Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="h-[500px] bg-cover bg-center grayscale bg-no-repeat" style="background-image: url('https://via.placeholder.com/1920x1080?text=Background');">
+    <!-- Quotes Slider -->
+    <div class="absolute inset-0 flex items-center justify-center px-6">
+      <div class="w-full max-w-3xl overflow-hidden">
+        <div
+          class="flex space-x-6 transition-transform duration-500 ease-in-out"
+          :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
+        >
+          <!-- Quote 1 -->
+          <div class="min-w-full text-center">
+            <p class="text-white text-2xl lg:text-4xl italic font-semibold">"The best way to predict the future is to create it."</p>
+          </div>
+          <!-- Quote 2 -->
+          <div class="min-w-full text-center">
+            <p class="text-white text-2xl lg:text-4xl italic font-semibold">"Success is not the key to happiness. Happiness is the key to success."</p>
+          </div>
+          <!-- Quote 3 -->
+          <div class="min-w-full text-center">
+            <p class="text-white text-2xl lg:text-4xl italic font-semibold">"Dream big, work hard, and never give up."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <button
+      class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-600"
+      @click="prevSlide"
+    >
+      ❮
+    </button>
+    <button
+      class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-600"
+      @click="nextSlide"
+    >
+      ❯
+    </button>
+  </div>
+
     </section>
   </div>
 </template>
@@ -348,7 +507,6 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-
 .scroll-arrow {
   animation: bounce 0.8s infinite; /* Atur animasi supaya terus berulang */
 }
@@ -372,3 +530,24 @@
   }
 }
 </style>
+
+<script>
+export default {
+  data() {
+    return {
+      currentSlide: 0, // Slide aktif
+      totalSlides: 3,  // Jumlah total slide
+    };
+  },
+  methods: {
+    nextSlide() {
+      this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+    },
+    prevSlide() {
+      this.currentSlide =
+        (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+    },
+  },
+};
+</script>
+
