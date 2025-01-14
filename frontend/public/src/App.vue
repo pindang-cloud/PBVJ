@@ -7,6 +7,7 @@
 
 <script>
 import navbar from "./views/navbar.vue";
+import "leaflet/dist/leaflet.css";
 
 export default {
   components: {

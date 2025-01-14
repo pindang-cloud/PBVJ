@@ -456,51 +456,92 @@
           </div>
         </div>
       </div>
+      
+      <div class="relative">
+        <section class="h-screen relative">
+          <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="text-center text-white">
+              <h1 class="text-4xl font-bold">"I'm a testimonial"</h1>
+              <p class="mt-4 text-lg">Click to edit me and add text that says something nice about you and your services.</p>
+              <p class="mt-2 font-semibold">James Reid</p>
+            </div>
+          </div>
+          <img
+            src="/src/assets/images/gapeen.jpg"
+            alt="Hero"
+            class="h-full w-full object-cover"
+          />
+        </section>
 
-      <div class="h-[500px] bg-cover bg-center grayscale bg-no-repeat" style="background-image: url('https://via.placeholder.com/1920x1080?text=Background');">
-    <!-- Quotes Slider -->
-    <div class="absolute inset-0 flex items-center justify-center px-6">
-      <div class="w-full max-w-3xl overflow-hidden">
-        <div
-          class="flex space-x-6 transition-transform duration-500 ease-in-out"
-          :style="{ transform: `translateX(-${currentSlide * 100}%)` }"
-        >
-          <!-- Quote 1 -->
-          <div class="min-w-full text-center">
-            <p class="text-white text-2xl lg:text-4xl italic font-semibold">"The best way to predict the future is to create it."</p>
+        <section class="h-96 relative bg-gray-200">
+          <div id="map" class="h-full"></div>
+        </section>
+
+        <footer class="bg-black text-white py-8">
+          <div class="container mx-auto flex justify-between">
+            <div>
+              <h4 class="text-lg font-bold">PBVSI KOTA JEMBER</h4>
+              <div class="mt-4 flex space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-white">Twitter</a>
+                <a href="#" class="text-gray-400 hover:text-white">Instagram</a>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="text-lg font-bold">HOURS OF OPERATION</h4>
+              <ul class="mt-4 space-y-1">
+                <li>Mon-Thu: 9AM to 8PM</li>
+                <li>Friday: 9AM to 9PM</li>
+                <li>Sat-Sun: Closed</li>
+              </ul>
+            </div>
+
+            <!-- Right Column -->
+            <div>
+              <h4 class="text-lg font-bold">CONTACT US</h4>
+              <ul class="mt-4 space-y-1">
+                <li>Jawa Timur, Kota Jember</li>
+                <li>Indonesia</li>
+                <li>Email: info@example.com</li>
+                <li>Phone: 123-456-7890</li>
+              </ul>
+            </div>
           </div>
-          <!-- Quote 2 -->
-          <div class="min-w-full text-center">
-            <p class="text-white text-2xl lg:text-4xl italic font-semibold">"Success is not the key to happiness. Happiness is the key to success."</p>
-          </div>
-          <!-- Quote 3 -->
-          <div class="min-w-full text-center">
-            <p class="text-white text-2xl lg:text-4xl italic font-semibold">"Dream big, work hard, and never give up."</p>
-          </div>
-        </div>
+        </footer>
       </div>
-    </div>
-
-    <!-- Navigation Buttons -->
-    <button
-      class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-600"
-      @click="prevSlide"
-    >
-      ❮
-    </button>
-    <button
-      class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-600"
-      @click="nextSlide"
-    >
-      ❯
-    </button>
-  </div>
-
     </section>
   </div>
 </template>
 
+<script>
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
+
+export default {
+  mounted() {
+    // Inisialisasi Leaflet Map
+    const map = L.map("map").setView([-8.172, 113.699], 13);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    // Tambahkan marker
+    L.marker([-8.172, 113.699])
+      .addTo(map)
+      .bindPopup("<b>PBVSI Kota Jember</b><br>Jawa Timur")
+      .openPopup();
+  },
+};
+</script>
+
 <style scoped>
+#map {
+  width: 100%;
+  height: 100%;
+}
+
 .bg-img {
   background-image: url("../assets/images/74988-gedung-pemkab-jember-homepage.jpg");
   background-size: cover;
@@ -531,23 +572,4 @@
 }
 </style>
 
-<script>
-export default {
-  data() {
-    return {
-      currentSlide: 0, // Slide aktif
-      totalSlides: 3,  // Jumlah total slide
-    };
-  },
-  methods: {
-    nextSlide() {
-      this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
-    },
-    prevSlide() {
-      this.currentSlide =
-        (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
-    },
-  },
-};
-</script>
 
