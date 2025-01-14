@@ -8,7 +8,7 @@ export default {
       },
       colors: {
         brown: {
-          500: '#A0522D',
+          500: "#A0522D",
         },
       },
     },
@@ -17,7 +17,7 @@ export default {
       md: "768px", // Default md breakpoint
       lg: "1024px", // Default lg breakpoint
       xl: "1280px", // Default xl breakpoint
-      "2xl": "1536px", // Default 2xl breakpoint
+      xls: "1536px", // Default 2xl breakpoint
 
       // Menambahkan custom screen breakpoints
       xs: "480px", // Kustom untuk extra small screen

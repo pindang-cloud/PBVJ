@@ -9,7 +9,7 @@
       >
         <!-- Logo Social Media -->
         <div
-          class="flex flex-row sm:mt-8 md:flex-col md:fixed md:left-0 justify-center lg:-translate-y-1/2 md:space-y-3 md:ml-3 order-last sm:space-x-3 md:space-x-0"
+          class="flex flex-row sm:mt-8 md:flex-col md:fixed md:left-0 justify-center lg:-translate-y-1/2 md:space-y-3 md:ml-3 order-last sm:space-x-3 md:space-x-0 md:z-50"
         >
           <a href="#">
             <img
@@ -70,7 +70,7 @@
 
       <!-- Teks Scroll -->
       <div
-        class="flex flex-col items-center md:fixed md:right-0 sm:mt-10 md:mt-0 md:mr-3 lg:transform lg:-translate-y-1/2 text-white text-sm font-semibold"
+        class="flex flex-col items-center md:fixed md:right-0 sm:mt-10 md:mt-0 md:mr-3 lg:transform lg:-translate-y-1/2 text-white text-sm font-semibold md:z-50"
       >
         <p
           class="mb-2 writing-mode-vertical md:text-center md:mb-2 tracking-widest"
@@ -337,58 +337,102 @@
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Our Clients -->
+    <!-- Our Clients -->
+    <section class="h-[500px] bg-gray-700 flex justify-center items-center">
       <div class="py-10 mx-10 md:mx-12 lg:mx-32 xl:mx-56">
         <div class="mx-auto max-w-xl mt-4">
-          <h1 class="text-white uppercase text-xl lg:text-3xl font-bold tracking-wider">
+          <h1
+            class="text-white uppercase text-xl lg:text-3xl font-bold tracking-wider"
+          >
             Our Clients
           </h1>
-          <div class="w-[40%] md:w-[50%] h-1 bg-gray-200 mt-2" data-v-40f7d07e=""></div>
+          <div class="w-[40%] md:w-[50%] h-1 bg-gray-200 mt-2"></div>
           <hr />
         </div>
         <div class="flex flex-wrap justify-center gap-6 p-6 bg-transparent">
-          <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-md w-24 h-24">
-            <img src="https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg" alt="Atlanta Hawks" class="w-full h-full object-contain">
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow-md sm:w-20 sm:h-20 md:w-24 md:h-24"
+          >
+            <img
+              src="https://cdn.nba.com/logos/nba/1610612737/primary/L/logo.svg"
+              alt="Atlanta Hawks"
+              class="w-full h-full object-contain"
+            />
           </div>
 
-          <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-md w-24 h-24">
-            <img src="https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg" alt="Golden State Warriors" class="w-full h-full object-contain">
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow-md sm:w-20 sm:h-20 md:w-24 md:h-24"
+          >
+            <img
+              src="https://cdn.nba.com/logos/nba/1610612744/primary/L/logo.svg"
+              alt="Golden State Warriors"
+              class="w-full h-full object-contain"
+            />
           </div>
 
-          <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-md w-24 h-24">
-            <img src="https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg" alt="Los Angeles Lakers" class="w-full h-full object-contain">
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow-md sm:w-20 sm:h-20 md:w-24 md:h-24"
+          >
+            <img
+              src="https://cdn.nba.com/logos/nba/1610612747/primary/L/logo.svg"
+              alt="Los Angeles Lakers"
+              class="w-full h-full object-contain"
+            />
           </div>
 
-          <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-md w-24 h-24">
-            <img src="https://cdn.nba.com/logos/nba/1610612758/primary/L/logo.svg" alt="Sacramento Kings" class="w-full h-full object-contain">
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow-md sm:w-20 sm:h-20 md:w-24 md:h-24"
+          >
+            <img
+              src="https://cdn.nba.com/logos/nba/1610612758/primary/L/logo.svg"
+              alt="Sacramento Kings"
+              class="w-full h-full object-contain"
+            />
           </div>
 
-          <div class="flex items-center justify-center p-4 bg-white rounded-lg shadow-md w-24 h-24">
-            <img src="https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg" alt="Toronto Raptors" class="w-full h-full object-contain">
+          <div
+            class="flex items-center justify-center p-4 bg-white rounded-lg shadow-md sm:w-20 sm:h-20 md:w-24 md:h-24"
+          >
+            <img
+              src="https://cdn.nba.com/logos/nba/1610612761/primary/L/logo.svg"
+              alt="Toronto Raptors"
+              class="w-full h-full object-contain"
+            />
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Service -->
-      <div class="bg-red-800 pb-10">
-        <div class="mx-auto max-w-xl pt-10">
-          <h1 class="text-white uppercase text-xl lg:text-3xl font-bold tracking-wider">
+    <!-- Service -->
+    <section class="min-h-screen bg-red-800 flex justify-center items-center">
+      <div class="py-20 mx-10 md:mx-12 lg:mx-32 xl:mx-56">
+        <div class="mx-auto max-w-xl">
+          <h1
+            class="text-white uppercase text-xl lg:text-3xl font-bold tracking-wider"
+          >
             Our Services
           </h1>
-          <div class="w-[40%] md:w-[50%] h-1 bg-gray-200 mt-2" data-v-40f7d07e=""></div>
+          <div class="w-[40%] md:w-[50%] h-1 bg-gray-200 mt-2"></div>
           <hr />
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 md:mx-12 lg:mx-32 xl:mx-56">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-6 py-2 mt-10 md:mx-12 lg:mx-16 xl:mx-56"
+        >
           <div class="text-center">
             <img
               src="../assets/images/megawati-hangestri-2072703356.webp"
               alt="Service 1"
               class="w-full h-auto object-contain"
             />
-            <h2 class="text-lg font-bold mt-4 text-white uppercase">Service 1</h2>
+            <h2 class="text-lg font-bold mt-4 text-white uppercase">
+              Service 1
+            </h2>
             <hr class="my-3 border-white-600" />
-            <button class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition">
+            <button
+              class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition uppercase"
+            >
               Book Now
             </button>
           </div>
@@ -399,9 +443,13 @@
               alt="Service 2"
               class="w-full h-auto object-contain"
             />
-            <h2 class="text-lg font-bold mt-4 text-white uppercase">Service 2</h2>
+            <h2 class="text-lg font-bold mt-4 text-white uppercase">
+              Service 2
+            </h2>
             <hr class="my-3 border-white-600" />
-            <button class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition">
+            <button
+              class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition uppercase"
+            >
               Book Now
             </button>
           </div>
@@ -412,9 +460,13 @@
               alt="Service 3"
               class="w-full h-auto object-contain"
             />
-            <h2 class="text-lg font-bold mt-4 text-white uppercase">Service 3</h2>
+            <h2 class="text-lg font-bold mt-4 text-white uppercase">
+              Service 3
+            </h2>
             <hr class="my-3 border-white-600" />
-            <button class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition">
+            <button
+              class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition uppercase"
+            >
               Book Now
             </button>
           </div>
@@ -424,9 +476,13 @@
               alt="Service 3"
               class="w-full h-auto object-contain"
             />
-            <h2 class="text-lg font-bold mt-4 text-white uppercase">Service 3</h2>
+            <h2 class="text-lg font-bold mt-4 text-white uppercase">
+              Service 3
+            </h2>
             <hr class="my-3 border-white-600" />
-            <button class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition">
+            <button
+              class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition uppercase"
+            >
               Book Now
             </button>
           </div>
@@ -436,9 +492,13 @@
               alt="Service 3"
               class="w-full h-auto object-contain"
             />
-            <h2 class="text-lg font-bold mt-4 text-white uppercase">Service 3</h2>
+            <h2 class="text-lg font-bold mt-4 text-white uppercase">
+              Service 3
+            </h2>
             <hr class="my-3 border-white-600" />
-            <button class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition">
+            <button
+              class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition uppercase"
+            >
               Book Now
             </button>
           </div>
@@ -448,90 +508,251 @@
               alt="Service 3"
               class="w-full h-auto object-contain"
             />
-            <h2 class="text-lg font-bold mt-4 text-white uppercase">Service 3</h2>
+            <h2 class="text-lg font-bold mt-4 text-white uppercase">
+              Service 3
+            </h2>
             <hr class="my-3 border-white-600" />
-            <button class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition">
+            <button
+              class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition uppercase"
+            >
               Book Now
             </button>
           </div>
         </div>
       </div>
-      
-      <div class="relative">
-        <section class="h-screen relative">
-          <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <div class="text-center text-white">
-              <h1 class="text-4xl font-bold">"I'm a testimonial"</h1>
-              <p class="mt-4 text-lg">Click to edit me and add text that says something nice about you and your services.</p>
-              <p class="mt-2 font-semibold">James Reid</p>
-            </div>
-          </div>
+    </section>
+
+    <section class="h-screen relative bg-gray-900">
+      <!-- Slides Container -->
+      <div
+        class="h-full w-full relative flex items-center justify-center overflow-hidden touch-pan-x"
+        @touchstart="handleTouchStart"
+        @touchmove="handleTouchMove"
+        @touchend="handleTouchEnd"
+      >
+        <div
+          v-for="(slide, index) in slides"
+          :key="index"
+          class="absolute inset-0 transition-transform duration-500"
+          :class="{
+            'translate-x-full': currentIndex < index,
+            '-translate-x-full': currentIndex > index,
+            'translate-x-0': currentIndex === index,
+          }"
+        >
+          <!-- Background Image -->
           <img
-            src="/src/assets/images/gapeen.jpg"
-            alt="Hero"
+            :src="slide.image"
+            alt="Quote Background"
             class="h-full w-full object-cover"
           />
-        </section>
-
-        <section class="h-96 relative bg-gray-200">
-          <div id="map" class="h-full"></div>
-        </section>
-
-        <footer class="bg-black text-white py-8">
-          <div class="container mx-auto flex justify-between">
-            <div>
-              <h4 class="text-lg font-bold">PBVSI KOTA JEMBER</h4>
-              <div class="mt-4 flex space-x-4">
-                <a href="#" class="text-gray-400 hover:text-white">Facebook</a>
-                <a href="#" class="text-gray-400 hover:text-white">Twitter</a>
-                <a href="#" class="text-gray-400 hover:text-white">Instagram</a>
-              </div>
-            </div>
-
-            <div>
-              <h4 class="text-lg font-bold">HOURS OF OPERATION</h4>
-              <ul class="mt-4 space-y-1">
-                <li>Mon-Thu: 9AM to 8PM</li>
-                <li>Friday: 9AM to 9PM</li>
-                <li>Sat-Sun: Closed</li>
-              </ul>
-            </div>
-
-            <!-- Right Column -->
-            <div>
-              <h4 class="text-lg font-bold">CONTACT US</h4>
-              <ul class="mt-4 space-y-1">
-                <li>Jawa Timur, Kota Jember</li>
-                <li>Indonesia</li>
-                <li>Email: info@example.com</li>
-                <li>Phone: 123-456-7890</li>
-              </ul>
-            </div>
+          <!-- Quote Content -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-center text-white px-4 lg:px-32"
+          >
+            <h1 class="text-xl md:text-2xl font-bold">{{ slide.quote }}</h1>
+            <p class="mt-4 text-sm md:text-xl">{{ slide.description }}</p>
+            <p class="mt-2 text-xs md:text-sm font-semibold">
+              - {{ slide.author }}
+            </p>
           </div>
-        </footer>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons (hidden on small screens) -->
+      <button
+        class="absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-50 text-black rounded-full h-10 w-10 sm:hidden md:block font-bold"
+        @click="prevSlide"
+      >
+        &#8592;
+      </button>
+      <button
+        class="absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 text-black rounded-full h-10 w-10 sm:hidden md:block"
+        @click="nextSlide"
+      >
+        &#8594;
+      </button>
+
+      <!-- Indicators -->
+      <div
+        class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2"
+      >
+        <span
+          v-for="(slide, index) in slides"
+          :key="index"
+          class="h-3 w-3 rounded-full border border-white"
+          :class="{
+            'bg-white': currentIndex === index,
+            'bg-gray-600': currentIndex !== index,
+          }"
+          @click="goToSlide(index)"
+        ></span>
+      </div>
+    </section>
+
+    <section class="h-96 relative bg-gray-200">
+      <div id="map" class="h-full"></div>
+    </section>
+
+    <section class="bg-black text-white py-6 px-5 md:px-20">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 lg:justify-between">
+        <div>
+          <h4 class="text-lg font-bold">PBVSI KOTA JEMBER</h4>
+          <div class="my-2 flex space-x-2">
+            <a href="#" class="text-gray-400 hover:text-white">
+              <img
+                src="../assets/icons/facebook-logo.png"
+                alt=""
+                class="w-4 h-auto"
+              />
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <img
+                src="../assets/icons/instagram-logo.png"
+                alt=""
+                class="w-4 h-auto"
+              />
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white">
+              <img
+                src="../assets/icons/youtube-logo.png"
+                alt=""
+                class="w-4 h-auto ml-1"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold pt-5 md:pt-0 lg:text-lg">
+            HOURS OF OPERATION
+          </h4>
+          <ul class="mt-2 space-y-1 text-xs lg:text-sm">
+            <li>Mon-Thu: 9AM to 8PM</li>
+            <li>Friday: 9AM to 9PM</li>
+            <li>Sat-Sun: Closed</li>
+          </ul>
+        </div>
+
+        <div class="sm:pt-5 lg:pt-0">
+          <h4 class="text-sm font-bold lg:text-lg">CONTACT US</h4>
+          <ul class="mt-2 space-y-1 text-xs lg:text-sm">
+            <li>Jawa Timur, Kota Jember</li>
+            <li>Indonesia</li>
+            <li>Email: info@example.com</li>
+            <li>Phone: 123-456-7890</li>
+          </ul>
+        </div>
       </div>
     </section>
   </div>
 </template>
 
 <script>
+import { ref, onMounted, onUnmounted } from "vue";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
 export default {
-  mounted() {
-    // Inisialisasi Leaflet Map
-    const map = L.map("map").setView([-8.172, 113.699], 13);
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      maxZoom: 19,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    }).addTo(map);
+  setup() {
+    const slides = ref([
+      {
+        quote: "The journey of a thousand miles begins with one step.",
+        description: "Take the first step to achieving your dreams.",
+        author: "Lao Tzu",
+        image: "/src/assets/images/gapeen.jpg",
+      },
+      {
+        quote:
+          "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+        description: "Keep going no matter what.",
+        author: "Winston Churchill",
+        image: "/src/assets/images/megawati-hangestri-2072703356.webp",
+      },
+      {
+        quote: "Believe you can and you're halfway there.",
+        description: "Confidence is the key to success.",
+        author: "Theodore Roosevelt",
+        image: "/src/assets/images/74988-gedung-pemkab-jember.jpg",
+      },
+    ]);
 
-    // Tambahkan marker
-    L.marker([-8.172, 113.699])
-      .addTo(map)
-      .bindPopup("<b>PBVSI Kota Jember</b><br>Jawa Timur")
-      .openPopup();
+    const currentIndex = ref(0);
+    let touchStartX = null;
+    let autoSlideInterval = null;
+
+    const nextSlide = () => {
+      currentIndex.value = (currentIndex.value + 1) % slides.value.length;
+    };
+
+    const prevSlide = () => {
+      currentIndex.value =
+        (currentIndex.value - 1 + slides.value.length) % slides.value.length;
+    };
+
+    const goToSlide = (index) => {
+      currentIndex.value = index;
+    };
+
+    const handleTouchStart = (event) => {
+      touchStartX = event.touches[0].clientX;
+    };
+
+    const handleTouchMove = (event) => {
+      if (!touchStartX) return;
+      const touchEndX = event.touches[0].clientX;
+      const diffX = touchStartX - touchEndX;
+
+      if (diffX > 50) {
+        nextSlide();
+        touchStartX = null;
+      } else if (diffX < -50) {
+        prevSlide();
+        touchStartX = null;
+      }
+    };
+
+    const handleTouchEnd = () => {
+      touchStartX = null;
+    };
+
+    const startAutoSlide = () => {
+      autoSlideInterval = setInterval(nextSlide, 10000);
+    };
+
+    const stopAutoSlide = () => {
+      clearInterval(autoSlideInterval);
+    };
+
+    onMounted(() => {
+      const map = L.map("map").setView([-8.172, 113.699], 13);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
+
+      L.marker([-8.172, 113.699])
+        .addTo(map)
+        .bindPopup("<b>PBVSI Kota Jember</b><br>Jawa Timur")
+        .openPopup();
+      startAutoSlide();
+    });
+
+    onUnmounted(() => {
+      stopAutoSlide();
+    });
+
+    return {
+      slides,
+      currentIndex,
+      nextSlide,
+      prevSlide,
+      goToSlide,
+      handleTouchStart,
+      handleTouchMove,
+      handleTouchEnd,
+    };
   },
 };
 </script>
@@ -564,6 +785,10 @@ export default {
   }
 }
 
+.absolute {
+  transition: transform 0.5s ease-in-out;
+}
+
 @media (min-width: 768px) {
   .writing-mode-vertical {
     writing-mode: vertical-rl; /* Menampilkan teks secara vertikal */
@@ -571,5 +796,3 @@ export default {
   }
 }
 </style>
-
-
