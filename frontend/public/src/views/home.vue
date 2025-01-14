@@ -86,7 +86,7 @@
     </section>
 
     <!-- structure organisasi -->
-    <section class="min-h-screen bg-gray-700 py-10">
+    <section class="bg-gray-700 py-10">
       <div
         class="py-10 md:py-20 mx-10 md:mx-12 lg:mx-32 xl:mx-56 flex items-center justify-center flex-col"
       >
@@ -195,7 +195,7 @@
     </section>
 
     <!-- sejarah & success -->
-    <section class="min-h-screen bg-gray-700">
+    <section class="bg-gray-700">
       <!-- Bagian 1: Sejarah -->
       <div class="bg-red-800 lg:flex lg:items-stretch lg:h-[600px]">
         <!-- Konten Kiri -->
