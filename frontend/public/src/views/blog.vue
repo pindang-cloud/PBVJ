@@ -1,49 +1,159 @@
 <template>
-  <div class="min-h-screen bg-[#374151] flex flex-col items-center px-4 py-12 text-white">
+  <div
+    class="min-h-screen bg-[#374151] flex flex-col items-center px-4 py-12 text-white"
+  >
     <div class="w-full max-w-5xl">
-      <h1 class="font-custom text-white text-2xl font-bold tracking-wide uppercase my-5 text-center">
+      <h1
+        class="font-custom text-white text-2xl font-bold tracking-wide uppercase my-5 text-center"
+      >
         Blog
       </h1>
-      <div class="bg-gray-800 shadow-md flex">
-        <!-- Image Section -->
-        <div class="w-1/2">
-          <img src="../assets/images/megawati-hangestri-2072703356.webp" alt="Blog Image" class="w-full h-full object-cover">
-        </div>
-        <!-- Content Section -->
-        <div class="w-1/2 p-6">
-          <div class="flex items-center">
-            <div class="bg-blue-500 text-white rounded-full p-2 mr-2">A</div>
-            <div>
-              <h3 class="text-white text-lg font-bold">Akun Ke Dua</h3>
-              <p class="text-gray-400 text-sm">Jul 23, 2022 - 1 min read</p>
-            </div>
+      <div
+        class="mt-14 bg-slate-600 sm:rounded-b-xl md:rounded-none md:rounded-r-xl"
+      >
+        <div class="md:flex h-max">
+          <!-- Bagian Gambar -->
+          <div
+            class="w-full md:w-2/3 bg-gray-500 flex justify-center items-center overflow-hidden sm:rounded-br-xl sm:rounded-bl-xl md:rounded-none md:rounded-r-xl shadow-2xl"
+          >
+            <img
+              src="../assets/images/74988-gedung-pemkab-jember.jpg"
+              class="w-full h-full object-cover"
+            />
           </div>
-          <h2 class="text-white text-2xl font-bold mt-4">NOW YOU CAN BLOG FROM EVERYWHERE</h2>
-          <p class="text-gray-400 mt-2">We've made it quick and convenient for you to manage your blog from anywhere. In this blog post, we'll share the ways you can do it.</p>
-          <div class="mt-4">
-            <p class="text-gray-400 text-sm">105 views - 0 comments</p>
+
+          <div
+            class="bg-transparent text-white p-5 md:w-2/3 md:px-14 md:py-14 flex flex-col"
+          >
+            <div class="flex space-x-3 items-center">
+              <div class="w-10 h-10 bg-gray-500 rounded-full overflow-hidden">
+                <img
+                  src="../assets/images/gapeen.jpg"
+                  alt="Profile Picture"
+                  class="w-full h-full object-cover object-center"
+                />
+              </div>
+              <div>
+                <h4 class="text-xs">Akun E Rapli</h4>
+                <p class="text-xs">Jul 24, 2020 - 1 min ago</p>
+              </div>
+            </div>
+
+            <h1
+              class="font-bold text-lg md:text-xl lg:text-3xl tracking-wider py-4"
+            >
+              BERITA TERBATU DAN TERDINGIN SEPANJANG SEJARAH AWOKAWOK
+            </h1>
+
+            <hr />
+
+            <div class="flex justify-between items-center py-2">
+              <div class="flex space-x-1">
+                <p class="text-white tex-xs">108 views</p>
+                <p class="text-white tex-xs">0 Comments</p>
+              </div>
+              <img src="../assets/icons/love.png" alt="" class="w-auto h-4" />
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="bg-gray-800 shadow-md flex mt-6">
-        <!-- Image Section -->
-        <div class="w-1/2">
-          <img src="../assets/images/megawati-hangestri-2072703356.webp" alt="Blog Image" class="w-50 h-50 object-cover">
-        </div>
-        <!-- Content Section -->
-        <div class="w-1/2 p-6">
-          <div class="flex items-center">
-            <div class="bg-blue-500 text-white rounded-full p-2 mr-2">A</div>
-            <div>
-              <h3 class="text-white text-lg font-bold">Akun Ke Dua</h3>
-              <p class="text-gray-400 text-sm">Jul 23, 2022 - 1 min read</p>
+      <div
+        class="mt-14 bg-slate-600 sm:rounded-b-xl md:rounded-none md:rounded-r-xl"
+      >
+        <div class="md:flex h-max">
+          <!-- Bagian Gambar -->
+          <div
+            class="w-full md:w-2/3 bg-gray-500 flex justify-center items-center overflow-hidden sm:rounded-br-xl sm:rounded-bl-xl md:rounded-none md:rounded-r-xl shadow-2xl"
+          >
+            <img
+              src="../assets/images/74988-gedung-pemkab-jember.jpg"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <div
+            class="bg-transparent text-white p-5 md:w-2/3 md:px-14 md:py-14 flex flex-col"
+          >
+            <div class="flex space-x-3 items-center">
+              <div class="w-10 h-10 bg-gray-500 rounded-full overflow-hidden">
+                <img
+                  src="../assets/images/gapeen.jpg"
+                  alt="Profile Picture"
+                  class="w-full h-full object-cover object-center"
+                />
+              </div>
+              <div>
+                <h4 class="text-xs">Akun E Rapli</h4>
+                <p class="text-xs">Jul 24, 2020 - 1 min ago</p>
+              </div>
+            </div>
+
+            <h1
+              class="font-bold text-lg md:text-xl lg:text-3xl tracking-wider py-4"
+            >
+              NOMER 3 BIKIN KAMU KAGET!!
+            </h1>
+
+            <hr />
+
+            <div class="flex justify-between items-center py-2">
+              <div class="flex space-x-1">
+                <p class="text-white tex-xs">108 views</p>
+                <p class="text-white tex-xs">0 Comments</p>
+              </div>
+              <img src="../assets/icons/love.png" alt="" class="w-auto h-4" />
             </div>
           </div>
-          <h2 class="text-white text-2xl font-bold mt-4">NOW YOU CAN BLOG FROM EVERYWHERE</h2>
-          <p class="text-gray-400 mt-2">We've made it quick and convenient for you to manage your blog from anywhere. In this blog post, we'll share the ways you can do it.</p>
-          <div class="mt-4">
-            <p class="text-gray-400 text-sm">105 views - 0 comments</p>
+        </div>
+      </div>
+
+      <div
+        class="mt-14 bg-slate-600 sm:rounded-b-xl md:rounded-none md:rounded-r-xl"
+      >
+        <div class="md:flex h-max">
+          <!-- Bagian Gambar -->
+          <div
+            class="w-full md:w-2/3 bg-gray-500 flex justify-center items-center overflow-hidden sm:rounded-br-xl sm:rounded-bl-xl md:rounded-none md:rounded-r-xl shadow-2xl"
+          >
+            <img
+              src="../assets/images/74988-gedung-pemkab-jember.jpg"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <div
+            class="bg-transparent text-white p-5 md:w-2/3 md:px-14 md:py-14 flex flex-col"
+          >
+            <div class="flex space-x-3 items-center">
+              <div class="w-10 h-10 bg-gray-500 rounded-full overflow-hidden">
+                <img
+                  src="../assets/images/megawati-hangestri-2072703356.webp"
+                  alt="Profile Picture"
+                  class="w-full h-full object-cover object-center"
+                />
+              </div>
+              <div>
+                <h4 class="text-xs">AKUN E RAPLI TAPI GAWE ANYAR</h4>
+                <p class="text-xs">Jul 24, 2020 - 1 min ago</p>
+              </div>
+            </div>
+
+            <h1
+              class="font-bold text-lg md:text-xl lg:text-3xl tracking-wider py-4"
+            >
+              NAH KAN KAGET!!! 🤣🤣🤣🤣
+            </h1>
+
+            <hr />
+
+            <div class="flex justify-between items-center py-2">
+              <div class="flex space-x-1">
+                <p class="text-white tex-xs">108 views</p>
+                <p class="text-white tex-xs">0 Comments</p>
+              </div>
+              <img src="../assets/icons/love.png" alt="" class="w-auto h-4" />
+            </div>
           </div>
         </div>
       </div>

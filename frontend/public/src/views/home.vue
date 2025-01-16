@@ -46,12 +46,12 @@
           >
             Persatuan Bola Voli SeIndonesia
           </h3>
-          <div class="flex items-stretch h-max mt-8">
+          <div class="flex items-stretch h-max mt-8 sm:hidden">
             <div class="w-2/3 bg-white px-4 py-2 flex items-center">
               <h3
                 class="uppercase tracking-widest font-bold text-xs text-center lg:text-xl"
               >
-                BOOK NOW
+                lihat detail
               </h3>
             </div>
             <div
@@ -132,7 +132,7 @@
                 <h3
                   class="uppercase tracking-widest font-bold text-xs text-center lg:text-xl"
                 >
-                  Learn More
+                  Selengkapnya
                 </h3>
               </div>
               <div
@@ -176,7 +176,7 @@
                 <h3
                   class="uppercase tracking-widest font-bold text-xs text-center lg:text-xl"
                 >
-                  Learn More
+                  Selengkapnya
                 </h3>
               </div>
               <div
@@ -408,17 +408,17 @@
     <!-- Service -->
     <section class="min-h-screen bg-red-800 flex justify-center items-center">
       <div class="py-20 mx-10 md:mx-12 lg:mx-32 xl:mx-56">
-        <div class="mx-auto max-w-xl">
+        <div class="mx-auto max-w-full">
           <h1
             class="text-white uppercase text-xl lg:text-3xl font-bold tracking-wider"
           >
-            Our Services
+            Layanan Kami
           </h1>
           <div class="w-[40%] md:w-[50%] h-1 bg-gray-200 mt-2"></div>
           <hr />
         </div>
         <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-6 py-2 mt-10 md:mx-12 lg:mx-16 xl:mx-56"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-6 mt-10 md:mx-12"
         >
           <div class="text-center">
             <img
@@ -426,96 +426,106 @@
               alt="Service 1"
               class="w-full h-auto object-contain"
             />
-            <h2 class="text-lg font-bold mt-4 text-white uppercase">
+            <h2
+              class="text-lg font-bold mt-4 text-white uppercase tracking-wide"
+            >
               Service 1
             </h2>
             <hr class="my-3 border-white-600" />
             <button
-              class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition uppercase"
+              class="bg-orange-500 w-max px-8 py-2 text-sm text-white font-bold tracking-widest hover:bg-orange-400 transition uppercase rounded-sm"
             >
-              Book Now
-            </button>
-          </div>
-
-          <div class="text-center">
-            <img
-              src="../assets/images/megawati-hangestri-2072703356.webp"
-              alt="Service 2"
-              class="w-full h-auto object-contain"
-            />
-            <h2 class="text-lg font-bold mt-4 text-white uppercase">
-              Service 2
-            </h2>
-            <hr class="my-3 border-white-600" />
-            <button
-              class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition uppercase"
-            >
-              Book Now
-            </button>
-          </div>
-
-          <div class="text-center">
-            <img
-              src="../assets/images/megawati-hangestri-2072703356.webp"
-              alt="Service 3"
-              class="w-full h-auto object-contain"
-            />
-            <h2 class="text-lg font-bold mt-4 text-white uppercase">
-              Service 3
-            </h2>
-            <hr class="my-3 border-white-600" />
-            <button
-              class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition uppercase"
-            >
-              Book Now
+              Selengkapnya
             </button>
           </div>
           <div class="text-center">
             <img
               src="../assets/images/megawati-hangestri-2072703356.webp"
-              alt="Service 3"
+              alt="Service 1"
               class="w-full h-auto object-contain"
             />
-            <h2 class="text-lg font-bold mt-4 text-white uppercase">
-              Service 3
+            <h2
+              class="text-lg font-bold mt-4 text-white uppercase tracking-wide"
+            >
+              Service 1
             </h2>
             <hr class="my-3 border-white-600" />
             <button
-              class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition uppercase"
+              class="bg-orange-500 w-max px-8 py-2 text-sm text-white font-bold tracking-widest hover:bg-orange-400 transition uppercase rounded-sm"
             >
-              Book Now
+              Selengkapnya
             </button>
           </div>
           <div class="text-center">
             <img
               src="../assets/images/megawati-hangestri-2072703356.webp"
-              alt="Service 3"
+              alt="Service 1"
               class="w-full h-auto object-contain"
             />
-            <h2 class="text-lg font-bold mt-4 text-white uppercase">
-              Service 3
+            <h2
+              class="text-lg font-bold mt-4 text-white uppercase tracking-wide"
+            >
+              Service 1
             </h2>
             <hr class="my-3 border-white-600" />
             <button
-              class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition uppercase"
+              class="bg-orange-500 w-max px-8 py-2 text-sm text-white font-bold tracking-widest hover:bg-orange-400 transition uppercase rounded-sm"
             >
-              Book Now
+              Selengkapnya
             </button>
           </div>
           <div class="text-center">
             <img
               src="../assets/images/megawati-hangestri-2072703356.webp"
-              alt="Service 3"
+              alt="Service 1"
               class="w-full h-auto object-contain"
             />
-            <h2 class="text-lg font-bold mt-4 text-white uppercase">
-              Service 3
+            <h2
+              class="text-lg font-bold mt-4 text-white uppercase tracking-wide"
+            >
+              Service 1
             </h2>
             <hr class="my-3 border-white-600" />
             <button
-              class="bg-orange-500 w-23 px-10 py-2 text-white font-bold tracking-wider hover:bg-orange-400 transition uppercase"
+              class="bg-orange-500 w-max px-8 py-2 text-sm text-white font-bold tracking-widest hover:bg-orange-400 transition uppercase rounded-sm"
             >
-              Book Now
+              Selengkapnya
+            </button>
+          </div>
+          <div class="text-center">
+            <img
+              src="../assets/images/megawati-hangestri-2072703356.webp"
+              alt="Service 1"
+              class="w-full h-auto object-contain"
+            />
+            <h2
+              class="text-lg font-bold mt-4 text-white uppercase tracking-wide"
+            >
+              Service 1
+            </h2>
+            <hr class="my-3 border-white-600" />
+            <button
+              class="bg-orange-500 w-max px-8 py-2 text-sm text-white font-bold tracking-widest hover:bg-orange-400 transition uppercase rounded-sm"
+            >
+              Selengkapnya
+            </button>
+          </div>
+          <div class="text-center">
+            <img
+              src="../assets/images/megawati-hangestri-2072703356.webp"
+              alt="Service 1"
+              class="w-full h-auto object-contain"
+            />
+            <h2
+              class="text-lg font-bold mt-4 text-white uppercase tracking-wide"
+            >
+              Service 1
+            </h2>
+            <hr class="my-3 border-white-600" />
+            <button
+              class="bg-orange-500 w-max px-8 py-2 text-sm text-white font-bold tracking-widest hover:bg-orange-400 transition uppercase rounded-sm"
+            >
+              Selengkapnya
             </button>
           </div>
         </div>
@@ -593,58 +603,6 @@
     <section class="h-96 relative bg-gray-200">
       <div id="map" class="h-full"></div>
     </section>
-
-    <section class="bg-black text-white py-6 px-5 md:px-20">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 lg:justify-between">
-        <div>
-          <h4 class="text-lg font-bold">PBVSI KOTA JEMBER</h4>
-          <div class="my-2 flex space-x-2">
-            <a href="#" class="text-gray-400 hover:text-white">
-              <img
-                src="../assets/icons/facebook-logo.png"
-                alt=""
-                class="w-4 h-auto"
-              />
-            </a>
-            <a href="#" class="text-gray-400 hover:text-white">
-              <img
-                src="../assets/icons/instagram-logo.png"
-                alt=""
-                class="w-4 h-auto"
-              />
-            </a>
-            <a href="#" class="text-gray-400 hover:text-white">
-              <img
-                src="../assets/icons/youtube-logo.png"
-                alt=""
-                class="w-4 h-auto ml-1"
-              />
-            </a>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="text-sm font-bold pt-5 md:pt-0 lg:text-lg">
-            HOURS OF OPERATION
-          </h4>
-          <ul class="mt-2 space-y-1 text-xs lg:text-sm">
-            <li>Mon-Thu: 9AM to 8PM</li>
-            <li>Friday: 9AM to 9PM</li>
-            <li>Sat-Sun: Closed</li>
-          </ul>
-        </div>
-
-        <div class="sm:pt-5 lg:pt-0">
-          <h4 class="text-sm font-bold lg:text-lg">CONTACT US</h4>
-          <ul class="mt-2 space-y-1 text-xs lg:text-sm">
-            <li>Jawa Timur, Kota Jember</li>
-            <li>Indonesia</li>
-            <li>Email: info@example.com</li>
-            <li>Phone: 123-456-7890</li>
-          </ul>
-        </div>
-      </div>
-    </section>
   </div>
 </template>
 
@@ -657,23 +615,26 @@ export default {
   setup() {
     const slides = ref([
       {
-        quote: "The journey of a thousand miles begins with one step.",
-        description: "Take the first step to achieving your dreams.",
-        author: "Lao Tzu",
+        quote:
+          "Kemenangan tidak datang dari bakat saja, tetapi dari kerja keras dan ketekunan.",
+        description:
+          "Teruslah berlatih dan pantang menyerah untuk mencapai puncak.",
+        author: "Anonim",
         image: "/src/assets/images/gapeen.jpg",
       },
       {
         quote:
-          "Success is not final, failure is not fatal: It is the courage to continue that counts.",
-        description: "Keep going no matter what.",
-        author: "Winston Churchill",
+          "Jangan takut gagal, karena setiap kekalahan adalah pelajaran menuju kemenangan.",
+        description: "Kegagalan adalah bagian dari perjalanan seorang juara.",
+        author: "Michael Jordan",
         image: "/src/assets/images/megawati-hangestri-2072703356.webp",
       },
       {
-        quote: "Believe you can and you're halfway there.",
-        description: "Confidence is the key to success.",
-        author: "Theodore Roosevelt",
-        image: "/src/assets/images/74988-gedung-pemkab-jember.jpg",
+        quote:
+          "Atlet hebat tidak terlahir dari kenyamanan, tetapi dari perjuangan tanpa henti.",
+        description: "Keluar dari zona nyamanmu dan temukan potensi terbaikmu.",
+        author: "Anonim",
+        image: "/src/assets/images/megawati-hangestri-2072703356.webp",
       },
     ]);
 

@@ -2,7 +2,13 @@
   <div>
     <!-- Navbar -->
     <div
-      class="bg-gray-700 flex justify-between items-center p-4 overflow-x-hidden"
+      :class="[
+        isFixed
+          ? 'fixed w-full top-0 z-50 bg-gray-700 duration-300 ease-in'
+          : 'relative bg-gray-700',
+        'flex justify-between items-center p-5 transition-shadow duration-300',
+        hasShadow ? 'shadow-md' : '',
+      ]"
     >
       <div class="flex items-center">
         <img
@@ -18,19 +24,6 @@
       </div>
 
       <div class="sm:hidden lg:flex items-center">
-        <div class="mr-8 flex items-center px-1 bg-white rounded-lg">
-          <img
-            src="../assets/icons/search-glass-gray.png"
-            alt="search"
-            class="lg:h-4 lg:w-4 xl:h-7 xl:w-7 xl:p-1"
-          />
-          <input
-            type="text"
-            placeholder="Search..."
-            class="lg:text-xs xl:text-sm p-2 rounded focus:outline-none"
-          />
-        </div>
-
         <div class="flex space-x-6 uppercase font-bold tracking-widest">
           <a
             href="/"
@@ -68,21 +61,6 @@
             >Blog</a
           >
         </div>
-
-        <div class="ml-3 bg-gray-600 rounded-full flex items-center py-1 px-2">
-          <div class="h-8 w-8 rounded-full bg-transparent overflow-hidden">
-            <img
-              src="../assets/images/74988-gedung-pemkab-jember.jpg"
-              alt="icon-person"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <img
-            src="../assets/icons/arrow-down-338-svgrepo-com.png"
-            alt="icon-arrow"
-            class="h-3 w-3 ml-3"
-          />
-        </div>
       </div>
 
       <!-- Toggle Button for Sidebar -->
@@ -91,21 +69,21 @@
         @click="toggleMenu"
       >
         <div
-          :class="[ 
+          :class="[
             'w-7 h-1 bg-white my-1 transition-all duration-300 ease-in-out rounded-md absolute',
-            isOpen ? 'rotate-45' : 'rotate-0 mb-6' 
+            isOpen ? 'rotate-45' : 'rotate-0 mb-6',
           ]"
         ></div>
         <div
-          :class="[ 
+          :class="[
             'w-6 h-1 bg-white my-1 transition-all duration-300 ease-in-out rounded-md absolute',
-            isOpen ? 'opacity-0' : '' 
+            isOpen ? 'opacity-0' : '',
           ]"
         ></div>
         <div
-          :class="[ 
+          :class="[
             'w-7 h-1 bg-white my-1 transition-all duration-300 ease-in-out rounded-md absolute',
-            isOpen ? '-rotate-45' : 'rotate-0 mt-6' 
+            isOpen ? '-rotate-45' : 'rotate-0 mt-6',
           ]"
         ></div>
       </button>
@@ -116,7 +94,7 @@
 </template>
 
 <script>
-import Sidebar from './sidebar.vue';
+import Sidebar from "./sidebar.vue";
 
 export default {
   components: {
@@ -125,12 +103,31 @@ export default {
   data() {
     return {
       isOpen: false, // Status menu (open/close)
+      hasShadow: false, // Status untuk navbar shadow
+      isFixed: false, // Status untuk menentukan apakah navbar fixed
     };
   },
   methods: {
     toggleMenu() {
       this.isOpen = !this.isOpen; // Mengubah status menu ketika tombol diklik
     },
+    handleScroll() {
+      const scrollY = window.scrollY;
+
+      // Tetapkan navbar fixed jika scrollY lebih dari 100px
+      this.isFixed = scrollY > 100;
+
+      // Tetapkan shadow jika scrollY lebih dari 0
+      this.hasShadow = scrollY > 0;
+    },
+  },
+  mounted() {
+    // Tambahkan event listener untuk scroll
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy() {
+    // Bersihkan event listener
+    window.removeEventListener("scroll", this.handleScroll);
   },
 };
 </script>

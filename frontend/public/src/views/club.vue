@@ -29,13 +29,13 @@
 
       <!-- data-club -->
       <div class="pt-20">
-        <div class="md:flex h-max">
+        <div class="md:flex">
           <!-- Bagian Gambar -->
           <div
-            class="w-full lg:w-2/3 bg-gray-500 flex justify-center items-center overflow-hidden"
+            class="w-full md:max-w-1/3 lg:w-2/3 bg-gray-500 flex justify-center items-center overflow-hidden h-[200px] md:h-[250px] lg:h-[350px] xl:h-[400px]"
           >
             <img
-              src="../assets/images/megawati-hangestri-2072703356.webp"
+              src="../assets/images/logo pbvsi.jpg"
               alt="icon person"
               class="w-full h-full object-cover"
             />
@@ -53,9 +53,9 @@
             <hr />
             <div class="flex justify-center">
               <button
-                class="mt-2 uppercase border-yellow-300 border-2 font-semibold w-[60%] md:w-[70%] text-xs px-3 py-1 text-yellow-300 tracking-widest hover:bg-yellow-300 hover:text-black hover:duration-300 duration-300"
+                class="mt-3 uppercase border-yellow-300 border-2 font-semibold px-4 py-2 rounded-sm text-xs text-yellow-300 tracking-widest hover:bg-yellow-300 hover:text-black hover:duration-300 duration-300"
               >
-                Book Now
+                Lihat Detail
               </button>
             </div>
           </div>
@@ -63,10 +63,44 @@
       </div>
 
       <div class="pt-20">
-        <div class="md:flex h-max">
+        <div class="md:flex">
           <!-- Bagian Gambar -->
           <div
-            class="w-full lg:w-2/3 bg-gray-500 flex justify-center items-center overflow-hidden"
+            class="w-full md:max-w-1/3 lg:w-2/3 bg-gray-500 flex justify-center items-center overflow-hidden h-[200px] md:h-[250px] lg:h-[350px] xl:h-[400px]"
+          >
+            <img
+              src="../assets/images/LOGO KAPOLRI CUP KOTA JEMBER.jpg"
+              alt="icon person"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <div
+            class="bg-red-950 text-white p-5 text-center lg:w-2/3 md:px-20 md:py-14 flex flex-col justify-center"
+          >
+            <h1 class="uppercase font-bold tracking-widest text-xl">
+              Megawati
+            </h1>
+            <p class="font-normal text-xs pt-1 pb-2">
+              Lorem ipsum dolor, sit amet consectetur adipisicing e
+            </p>
+            <hr />
+            <div class="flex justify-center">
+              <button
+                class="mt-3 uppercase border-yellow-300 border-2 font-semibold px-4 py-2 rounded-sm text-xs text-yellow-300 tracking-widest hover:bg-yellow-300 hover:text-black hover:duration-300 duration-300"
+              >
+                Lihat Detail
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pt-20">
+        <div class="md:flex">
+          <!-- Bagian Gambar -->
+          <div
+            class="w-full md:max-w-1/3 lg:w-2/3 bg-gray-500 flex justify-center items-center overflow-hidden h-[200px] md:h-[250px] lg:h-[350px] xl:h-[400px]"
           >
             <img
               src="../assets/images/gapeen.jpg"
@@ -79,17 +113,17 @@
             class="bg-red-950 text-white p-5 text-center lg:w-2/3 md:px-20 md:py-14 flex flex-col justify-center"
           >
             <h1 class="uppercase font-bold tracking-widest text-xl">
-              GAPIN EL MAYOR
+              Megawati
             </h1>
             <p class="font-normal text-xs pt-1 pb-2">
-              side-job nya suting di harry poter
+              Lorem ipsum dolor, sit amet consectetur adipisicing e
             </p>
             <hr />
             <div class="flex justify-center">
               <button
-                class="mt-2 uppercase border-yellow-300 border-2 font-semibold w-[60%] md:w-[70%] text-xs px-3 py-1 text-yellow-300 tracking-widest hover:bg-yellow-300 hover:text-black hover:duration-300 duration-300"
+                class="mt-3 uppercase border-yellow-300 border-2 font-semibold px-4 py-2 rounded-sm text-xs text-yellow-300 tracking-widest hover:bg-yellow-300 hover:text-black hover:duration-300 duration-300"
               >
-                Book Now
+                Lihat Detail
               </button>
             </div>
           </div>

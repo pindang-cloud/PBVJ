@@ -26,61 +26,88 @@
       </div>
 
       <!-- data-database -->
-      <div class="mt-20 border-white border-[1px]">
+      <div
+        class="mt-20 bg-slate-600 sm:rounded-b-xl md:rounded-none md:rounded-r-xl"
+      >
         <div class="md:flex h-max">
           <!-- Bagian Gambar -->
           <div
-            class="w-full md:w-2/3 bg-gray-500 flex justify-center items-center overflow-hidden"
+            class="w-full md:w-2/3 bg-gray-500 flex justify-center items-center overflow-hidden sm:rounded-br-xl sm:rounded-bl-xl md:rounded-none md:rounded-r-xl shadow-2xl"
           >
             <img
               src="../assets/images/74988-gedung-pemkab-jember.jpg"
-              alt="icon person"
               class="w-full h-auto object-cover"
             />
           </div>
 
           <div
-            class="bg-transparent text-white p-5 md:w-2/3 md:px-14 md:py-14 flex flex-col justify-center"
+            class="bg-transparent text-white p-5 md:w-2/3 md:px-14 md:py-14 flex flex-col justify-center items-center"
           >
-            <h1 class="uppercase font-bold tracking-wider text-sm">
+            <h1 class="uppercase font-bold tracking-wider text-sm text-center">
               daftar pelatih
             </h1>
-            <p class="font-normal text-xs pt-1 pb-2">2 Weeks</p>
-            <p class="font-normal text-xs pt-1 pb-2">2 Free</p>
             <button
-              class="mt-2 uppercase bg-white font-bold w-[70%] rounded-sm md:w-[70%] text-xs px-3 py-1 tracking-widest text-black hover:shadow-[0_0_10px_4px_rgba(255,255,255,0.2)] hover:duration-300 duration-300"
+              class="mt-2 uppercase bg-white font-bold w-[80%] rounded-sm text-xs px-3 py-1 tracking-widest text-black hover:shadow-[0_0_10px_4px_rgba(255,255,255,0.2)] hover:duration-300 duration-300"
             >
-              View Details
+              Lihat Detail
             </button>
           </div>
         </div>
       </div>
 
-      <div class="mt-20 border-white border-[1px]">
+      <div
+        class="mt-20 bg-slate-600 sm:rounded-b-xl md:rounded-none md:rounded-r-xl"
+      >
         <div class="md:flex h-max">
           <!-- Bagian Gambar -->
           <div
-            class="w-full md:w-2/3 bg-gray-500 flex justify-center items-center overflow-hidden"
+            class="w-full md:w-2/3 bg-gray-500 flex justify-center items-center overflow-hidden sm:rounded-br-xl sm:rounded-bl-xl md:rounded-none md:rounded-r-xl shadow-2xl"
           >
             <img
               src="../assets/images/74988-gedung-pemkab-jember.jpg"
-              alt="icon person"
               class="w-full h-auto object-cover"
             />
           </div>
 
           <div
-            class="bg-transparent text-white p-5 md:w-2/3 md:px-14 md:py-14 flex flex-col justify-center"
+            class="bg-transparent text-white p-5 md:w-2/3 md:px-14 md:py-14 flex flex-col justify-center items-center"
           >
-            <h1 class="uppercase font-bold tracking-wider text-sm">
-              daftar pelatih
+            <h1 class="uppercase font-bold tracking-wider text-sm text-center">
+              daftar pemain
             </h1>
-            <p class="font-normal text-xs pt-1 pb-2">2 Weeks</p>
-            <p class="font-normal text-xs pt-1 pb-2">2 Free</p>
             <button
-              class="mt-2 uppercase bg-white font-bold w-[70%] rounded-sm md:w-[70%] text-xs px-3 py-1 tracking-widest text-black hover:shadow-[0_0_10px_4px_rgba(255,255,255,0.2)] hover:duration-300 duration-300"
+              class="mt-2 uppercase bg-white font-bold w-[80%] rounded-sm text-xs px-3 py-1 tracking-widest text-black hover:shadow-[0_0_10px_4px_rgba(255,255,255,0.2)] hover:duration-300 duration-300"
             >
-              View Details
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="mt-20 bg-slate-600 sm:rounded-b-xl md:rounded-none md:rounded-r-xl"
+      >
+        <div class="md:flex h-max">
+          <!-- Bagian Gambar -->
+          <div
+            class="w-full md:w-2/3 bg-gray-500 flex justify-center items-center overflow-hidden sm:rounded-br-xl sm:rounded-bl-xl md:rounded-none md:rounded-r-xl shadow-2xl"
+          >
+            <img
+              src="../assets/images/74988-gedung-pemkab-jember.jpg"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+
+          <div
+            class="bg-transparent text-white p-5 md:w-2/3 md:px-14 md:py-14 flex flex-col justify-center items-center"
+          >
+            <h1 class="uppercase font-bold tracking-wider text-sm text-center">
+              daftar wasit
+            </h1>
+            <button
+              class="mt-2 uppercase bg-white font-bold w-[80%] rounded-sm text-xs px-3 py-1 tracking-widest text-black hover:shadow-[0_0_10px_4px_rgba(255,255,255,0.2)] hover:duration-300 duration-300"
+            >
+              Lihat Detail
             </button>
           </div>
         </div>
