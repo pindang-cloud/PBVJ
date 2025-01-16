@@ -1,0 +1,19 @@
+/* main.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "LuloFont";
+  src: url("https://db.onlinewebfonts.com/t/39a2c7f346d5cfae7045aeb2fb50d9ad.eot");
+  src: url("https://db.onlinewebfonts.com/t/39a2c7f346d5cfae7045aeb2fb50d9ad.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/39a2c7f346d5cfae7045aeb2fb50d9ad.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/39a2c7f346d5cfae7045aeb2fb50d9ad.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/39a2c7f346d5cfae7045aeb2fb50d9ad.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/39a2c7f346d5cfae7045aeb2fb50d9ad.svg#Lulo Clean W01 One Bold")
+      format("svg");
+}

@@ -1,0 +1,99 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  USER
+}
+
+enum Posisi {
+  SETTER
+  OUTSIDE_HITTER
+  OPPOSITE
+  LIBERO
+  MIDDLE_BLOCKER
+}
+
+enum PosisiWasit {
+  WASIT_UTAMA
+  WASIT_GARIS
+  WASIT_PENCATAT_SKOR
+}
+
+model User {
+  id_user    String    @id @default(uuid())
+  username   String?
+  email      String    @unique
+  password   String
+  phone      String?
+  role       Role      @default(USER)
+  created_at DateTime  @default(now())
+  update_at  DateTime  @updatedAt
+  deleted_at DateTime?
+}
+
+model Berita {
+  id_berita  String    @id @default(uuid())
+  judul      String
+  deskripsi  String
+  gambar     String
+  created_at DateTime  @default(now())
+  update_at  DateTime  @updatedAt
+  deleted_at DateTime?
+}
+
+model Tim {
+  id_tim     String    @id @default(uuid())
+  nama       String    @unique
+  logo       String
+  deskripsi  String
+  created_at DateTime  @default(now())
+  update_at  DateTime  @updatedAt
+  deleted_at DateTime?
+  pemain     Pemain[]
+  pelatih    Pelatih[]
+}
+
+model Pemain {
+  id_pemain     String    @id @default(uuid())
+  name          String
+  nomerPunggung Int
+  posisi        Posisi
+  created_at    DateTime  @default(now())
+  updated_at    DateTime  @updatedAt
+  deleted_at    DateTime?
+  Tim           Tim?      @relation(fields: [timId_tim], references: [id_tim])
+  timId_tim     String?
+}
+
+model Pelatih {
+  id_pelatih   String    @id @default(uuid())
+  name         String
+  usia         Int
+  pengalaman   String
+  tanggalMulai DateTime // Tanggal mulai melatih
+  created_at   DateTime  @default(now())
+  updated_at   DateTime  @updatedAt
+  deleted_at   DateTime?
+  Tim          Tim?      @relation(fields: [timId_tim], references: [id_tim])
+  timId_tim    String?
+}
+
+model Wasit {
+  id_wasit     String      @id @default(uuid())
+  name         String
+  usia         Int
+  pengalaman   String
+  sertifikasi  String?
+  tanggalMulai DateTime
+  posisi       PosisiWasit
+  created_at   DateTime    @default(now())
+  updated_at   DateTime    @updatedAt
+  deleted_at   DateTime?
+}
