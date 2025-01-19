@@ -10,7 +10,7 @@
         hasShadow ? 'shadow-md' : '',
       ]"
     >
-      <div class="flex items-center">
+      <div class="flex items-center" @click="toHome()">
         <img
           src="../assets/images/Jember.png"
           alt="icon-jember"
@@ -119,6 +119,9 @@ export default {
 
       // Tetapkan shadow jika scrollY lebih dari 0
       this.hasShadow = scrollY > 0;
+    },
+    toHome() {
+      window.location.href = "/";
     },
   },
   mounted() {

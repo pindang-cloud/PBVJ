@@ -16,6 +16,7 @@
               src="../assets/icons/facebook-logo.png"
               alt="facebook-logo"
               class="w-5 h-auto"
+              loading="lazy"
             />
           </a>
           <a href="#">
@@ -23,6 +24,7 @@
               src="../assets/icons/instagram-logo.png"
               alt="instagram-logo"
               class="w-5 h-auto"
+              loading="lazy"
             />
           </a>
           <a href="#">
@@ -30,11 +32,13 @@
               src="../assets/icons/youtube-logo.png"
               alt="youtube-logo"
               class="w-5 h-auto"
+              loading="lazy"
             />
           </a>
         </div>
 
-        <div class="md:ml-12">
+        <!-- Teks Utama dengan Efek Fade-In -->
+        <div class="md:ml-12 fade-in">
           <h1
             class="uppercase font-bold text-3xl tracking-wider text-white md:text-5xl lg:text-7xl"
           >
@@ -56,12 +60,12 @@
             </div>
             <div
               class="bg-yellow-600 px-2 py-1 flex justify-center items-center"
-              @click=""
             >
               <img
                 src="../assets/icons/arrow-right.png"
                 alt="arrow-right"
                 class="w-5 lg:w-7"
+                loading="lazy"
               />
             </div>
           </div>
@@ -73,7 +77,7 @@
         class="flex flex-col items-center md:fixed md:right-0 sm:mt-10 md:mt-0 md:mr-3 lg:transform lg:-translate-y-1/2 text-white text-sm font-semibold md:z-50"
       >
         <p
-          class="mb-2 writing-mode-vertical md:text-center md:mb-2 tracking-widest"
+          class="mb-2 writing-mode-vertical md:text-center md:mb-2 tracking-widest fade-in"
         >
           Scroll
         </p>
@@ -90,7 +94,7 @@
       <div
         class="py-10 md:py-20 mx-10 md:mx-12 lg:mx-32 xl:mx-56 flex items-center justify-center flex-col"
       >
-        <div class="md:w-[80%]">
+        <div class="md:w-[80%] fade-in">
           <h1
             class="text-white uppercase text-xl lg:text-3xl font-bold tracking-wider"
           >
@@ -106,21 +110,22 @@
       >
         <!-- Item 1 -->
         <div
-          class="max-w-xs md:max-w-md lg:max-w-xl flex flex-col items-center md:items-start mb-8"
+          ref="item1"
+          class="max-w-xs md:max-w-md lg:max-w-xl flex flex-col items-center md:items-start mb-8 fade-in"
         >
           <div class="h-[200px] md:h-[250px] lg:h-[300px] w-full">
             <img
-              src="../assets/images/gapeen.jpg"
+              src="../assets/images/megawati-hangestri-2072703356.webp"
               alt="person-man"
               class="w-full h-full object-cover object-center grayscale hover:grayscale-0 duration-300"
+              loading="lazy"
             />
           </div>
-
           <div class="text-center mt-4">
             <h2
               class="uppercase font-bold text-sm tracking-wide text-white text-center mt-2 lg:text-lg"
             >
-              Dr. Rapli Master
+              ANONIM
             </h2>
             <p class="text-white text-xs md:text-sm text-center">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
@@ -150,7 +155,8 @@
 
         <!-- Item 2 -->
         <div
-          class="max-w-xs md:max-w-md lg:max-w-xl flex flex-col items-center py-10 md:py-0"
+          ref="item2"
+          class="max-w-xs md:max-w-md lg:max-w-xl flex flex-col items-center py-10 md:py-0 fade-in"
         >
           <div class="h-[200px] md:h-[250px] lg:h-[300px] w-full">
             <img
@@ -159,12 +165,11 @@
               class="w-full h-full object-cover object-center grayscale hover:grayscale-0 duration-300"
             />
           </div>
-
           <div class="text-center md:text-left mt-4">
             <h2
               class="uppercase font-bold text-sm tracking-wide text-white text-center mt-2 lg:text-lg"
             >
-              Dr. Megawati Hangestri
+              ANONIM
             </h2>
             <p class="text-white text-xs md:text-sm text-center">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro
@@ -620,13 +625,13 @@ export default {
         description:
           "Teruslah berlatih dan pantang menyerah untuk mencapai puncak.",
         author: "Anonim",
-        image: "/src/assets/images/gapeen.jpg",
+        image: "/src/assets/images/megawati-hangestri-2072703356.webp",
       },
       {
         quote:
           "Jangan takut gagal, karena setiap kekalahan adalah pelajaran menuju kemenangan.",
         description: "Kegagalan adalah bagian dari perjalanan seorang juara.",
-        author: "Michael Jordan",
+        author: "Anonim",
         image: "/src/assets/images/megawati-hangestri-2072703356.webp",
       },
       {
@@ -673,6 +678,23 @@ export default {
       }
     };
 
+    const item1 = ref(null);
+    const item2 = ref(null);
+
+    const observeItems = () => {
+      const options = { threshold: 0.2 }; // Set threshold to detect when 20% of element is visible
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in-visible");
+          }
+        });
+      }, options);
+
+      observer.observe(item1.value);
+      observer.observe(item2.value);
+    };
+
     const handleTouchEnd = () => {
       touchStartX = null;
     };
@@ -686,6 +708,8 @@ export default {
     };
 
     onMounted(() => {
+      observeItems();
+
       const map = L.map("map").setView([-8.172, 113.699], 13);
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
@@ -713,6 +737,8 @@ export default {
       handleTouchStart,
       handleTouchMove,
       handleTouchEnd,
+      item1,
+      item2,
     };
   },
 };
@@ -749,6 +775,8 @@ export default {
 .absolute {
   transition: transform 0.5s ease-in-out;
 }
+
+/* src/assets/styles.css atau di file global CSS */
 
 @media (min-width: 768px) {
   .writing-mode-vertical {

@@ -1,7 +1,7 @@
 <template>
   <div>
     <section
-      class="py-10 md:py-20 lg:py-32 xl:py-40 mx-10 lg:mx-32 xl:mx-56 lg:m-auto"
+      class="py-10 md:py-20 lg:py-32 xl:py-40 mx-10 lg:mx-32 xl:mx-56 lg:m-auto fade-in"
     >
       <div class="md:mx-5">
         <h1
@@ -38,6 +38,7 @@
               src="../assets/images/logo pbvsi.jpg"
               alt="icon person"
               class="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
 

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen py-10 md:py-20 lg:py-32 xl:py-40 mx-10 lg:mx-32 xl:mx-56 lg:m-auto"
+    class="min-h-screen py-10 md:py-20 lg:py-32 xl:py-40 mx-10 lg:mx-32 xl:mx-56 lg:m-auto fade-in"
   >
     <div class="md:mx-5 pb-10">
       <h1
@@ -54,7 +54,7 @@
 
       <button
         type="submit"
-        class="border border-yellow-600 bg-transparent py-3 px-6 focus:outline-none focus:ring-2 focus:ring-yellow-500 w-full hover:bg-yellow-600 hover:text-black duration-300 text-yellow-600 text-sm font-semibold font-custom hover:text-black"
+        class="border border-yellow-600 bg-transparent py-3 px-6 focus:outline-none focus:ring-2 focus:ring-yellow-500 w-full hover:bg-yellow-600 hover:text-black duration-300 text-yellow-600 text-sm font-semibold font-custom"
       >
         SEND
       </button>

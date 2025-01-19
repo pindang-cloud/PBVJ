@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen bg-[#374151] flex flex-col items-center px-4 py-12 text-white"
+    class="min-h-screen bg-[#374151] flex flex-col items-center px-4 py-12 text-white fade-in"
   >
     <div class="w-full max-w-5xl">
       <h1
@@ -12,9 +12,10 @@
         <div class="bg-gray-100 shadow-md overflow-hidden">
           <div class="sm:h-[200px] md:h-[300px]">
             <img
-              src="../assets/images/LOGO PORPROV JATIM 2024.webp"
+              src="../assets/images/LOGO KAPOLRI CUP KOTA JEMBER.jpg"
               alt="Small Business Meetup"
               class="w-full h-full object-cover object-center"
+              loading="lazy"
             />
           </div>
           <div class="p-4 text-center">
@@ -33,9 +34,10 @@
         <div class="bg-gray-100 shadow-md overflow-hidden">
           <div class="sm:h-[200px] md:h-[300px]">
             <img
-              src="../assets/images/LOGO PON XXI ACEH-SUMUT 2024.png"
+              src="../assets/images/LOGO KAPOLRI CUP KOTA JEMBER.jpg"
               alt="Small Business Meetup"
               class="w-full h-full object-cover object-center"
+              loading="lazy"
             />
           </div>
           <div class="p-4 text-center">
@@ -56,6 +58,7 @@
               src="../assets/images/LOGO KAPOLRI CUP KOTA JEMBER.jpg"
               alt="Small Business Meetup"
               class="w-full h-full object-cover object-center"
+              loading="lazy"
             />
           </div>
           <div class="p-4 text-center">

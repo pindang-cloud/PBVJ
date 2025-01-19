@@ -1,7 +1,7 @@
 <template>
   <div>
     <section
-      class="py-10 md:py-32 xl:py-56 md:flex mx-10 lg:mx-32 xl:mx-48 lg:m-auto"
+      class="py-10 md:py-32 xl:py-56 md:flex mx-10 lg:mx-32 xl:mx-48 lg:m-auto fade-in"
     >
       <div class="md:mx-5">
         <h1
@@ -69,6 +69,7 @@
                 src="../assets/images/icon-person.png"
                 alt="icon person"
                 class="w-full h-auto object-cover"
+                loading="lazy"
               />
             </div>
 
@@ -78,7 +79,7 @@
               <h3
                 class="uppercase text-yellow-400 font-bold pt-4 sm:text-sm md:text-lg"
               >
-                Dr. David Kane
+                Anonim
               </h3>
               <p class="font-normal uppercase sm:text-xs md:text-sm">
                 Pembina Bola Voli Jember
@@ -127,6 +128,7 @@
                 src="../assets/images/icon-person.png"
                 alt="icon person"
                 class="w-full h-auto object-cover"
+                loading="lazy"
               />
             </div>
 
@@ -136,7 +138,7 @@
               <h3
                 class="uppercase text-yellow-400 font-bold pt-4 sm:text-sm md:text-lg"
               >
-                Dr. David Kane
+                Anonim
               </h3>
               <p class="font-normal uppercase sm:text-xs md:text-sm">
                 Pembina Bola Voli Jember

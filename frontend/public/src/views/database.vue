@@ -1,7 +1,7 @@
 <template>
   <div>
     <section
-      class="py-10 md:py-20 lg:py-32 xl:py-40 mx-10 lg:mx-32 xl:mx-56 lg:m-auto"
+      class="py-10 md:py-20 lg:py-32 xl:py-40 mx-10 lg:mx-32 xl:mx-56 lg:m-auto fade-in"
     >
       <div class="">
         <h1
@@ -37,6 +37,7 @@
             <img
               src="../assets/images/74988-gedung-pemkab-jember.jpg"
               class="w-full h-auto object-cover"
+              loading="lazy"
             />
           </div>
 
@@ -66,6 +67,7 @@
             <img
               src="../assets/images/74988-gedung-pemkab-jember.jpg"
               class="w-full h-auto object-cover"
+              loading="lazy"
             />
           </div>
 
@@ -95,6 +97,7 @@
             <img
               src="../assets/images/74988-gedung-pemkab-jember.jpg"
               class="w-full h-auto object-cover"
+              loading="lazy"
             />
           </div>
 
